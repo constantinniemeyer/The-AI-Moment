@@ -92,7 +92,7 @@
     {% comment %} Direct audio file embed {% endcomment %}
     <div class="podcast-embed__player podcast-embed__player--audio">
       <audio controls class="podcast-embed__audio" preload="metadata">
-        <source src="{{ p_id }}" type="audio/mpeg">
+        <source src="{{ p_id | relative_url }}" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
     </div>
