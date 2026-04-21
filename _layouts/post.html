@@ -1,0 +1,82 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <div class="post-meta">
+      <span class="post-date">{{ page.date | date: "%B %-d, %Y" }}</span>
+      {% if page.categories %}
+        <span class="post-categories">
+          {% for category in page.categories %}
+            <a href="{{ '/articles/#' | append: category | relative_url }}" class="category-tag">{{ category }}</a>
+          {% endfor %}
+        </span>
+      {% endif %}
+      {% if page.tags %}
+        <span class="post-tags">
+          {% for tag in page.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </span>
+      {% endif %}
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <p class="post-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+    {% if page.author %}
+      <p class="post-author">By {{ page.author }}</p>
+    {% endif %}
+    {% if page.source_url %}
+      <p class="post-source">
+        Source: <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer">{{ page.source_name | default: page.source_url }}</a>
+      </p>
+    {% endif %}
+  </header>
+
+  {% if page.podcast_id %}
+    <div class="media-embed-section">
+      <h2 class="media-section-title">🎙️ Listen to the Podcast</h2>
+      {% include podcast-embed.html
+         podcast_id=page.podcast_id
+         podcast_type=page.podcast_type
+         podcast_title=page.title %}
+    </div>
+  {% endif %}
+
+  {% if page.video_id %}
+    <div class="media-embed-section">
+      <h2 class="media-section-title">🎬 Watch the Video</h2>
+      {% include video-embed.html
+         video_id=page.video_id
+         video_type=page.video_type
+         video_title=page.title %}
+    </div>
+  {% endif %}
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    {% if page.further_reading %}
+      <div class="further-reading">
+        <h3>Further Reading</h3>
+        <ul>
+          {% for item in page.further_reading %}
+            <li><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    <nav class="post-navigation">
+      {% if page.previous.url %}
+        <a href="{{ page.previous.url | relative_url }}" class="nav-prev">&larr; {{ page.previous.title }}</a>
+      {% endif %}
+      {% if page.next.url %}
+        <a href="{{ page.next.url | relative_url }}" class="nav-next">{{ page.next.title }} &rarr;</a>
+      {% endif %}
+    </nav>
+  </footer>
+</article>

@@ -1,0 +1,61 @@
+title: "The AI Moment"
+description: "Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution."
+baseurl: ""
+url: "https://constantinniemeyer.github.io"
+
+# Author
+author:
+  name: "The AI Moment"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:year/:month/:day/:title/
+
+# Plugins (GitHub Pages supported)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Articles"
+    url: "/articles/"
+  - title: "Podcasts"
+    url: "/podcasts/"
+  - title: "Videos"
+    url: "/videos/"
+  - title: "About"
+    url: "/about/"
+
+# Collections
+collections:
+  posts:
+    output: true
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .jekyll-cache/

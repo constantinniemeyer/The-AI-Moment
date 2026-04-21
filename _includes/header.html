@@ -1,0 +1,26 @@
+<header class="site-header">
+  <div class="container">
+    <div class="site-header-inner">
+      <a href="{{ '/' | relative_url }}" class="site-logo">
+        <span class="site-logo-icon">⚡</span>
+        <span class="site-logo-text">{{ site.title }}</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
+        <ul class="nav-list">
+          {% for item in site.navigation %}
+            <li class="nav-item {% if page.url == item.url %}active{% endif %}">
+              <a href="{{ item.url | relative_url }}" class="nav-link">{{ item.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

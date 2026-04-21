@@ -1,0 +1,88 @@
+{% comment %}
+  Video Embed Include
+  
+  Usage in front matter (post.html uses these automatically):
+    video_id: "dQw4w9WgXcQ"
+    video_type: "youtube"   # or "vimeo", "notebooklm"
+  
+  Or inline in markdown:
+    {% include video-embed.html
+       video_id="dQw4w9WgXcQ"
+       video_type="youtube"
+       video_title="Video Title" %}
+
+  Supported types:
+    - youtube  : YouTube video ID (e.g., "dQw4w9WgXcQ")
+    - vimeo    : Vimeo video ID (e.g., "123456789")
+    - notebooklm : NotebookLM notebook ID for video content
+{% endcomment %}
+
+{% assign v_type = include.video_type | default: "youtube" %}
+{% assign v_id = include.video_id %}
+{% assign v_title = include.video_title | default: "Video" %}
+
+<div class="video-embed" role="region" aria-label="Video: {{ v_title }}">
+  {% if v_type == "youtube" %}
+    {% comment %} YouTube Embed {% endcomment %}
+    <div class="video-embed__container">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/{{ v_id }}?rel=0&modestbranding=1"
+        title="{{ v_title }}"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        loading="lazy"
+        class="video-embed__iframe"
+      ></iframe>
+    </div>
+    <p class="video-embed__caption">
+      📺 <a href="https://www.youtube.com/watch?v={{ v_id }}" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+    </p>
+
+  {% elsif v_type == "vimeo" %}
+    {% comment %} Vimeo Embed {% endcomment %}
+    <div class="video-embed__container">
+      <iframe
+        src="https://player.vimeo.com/video/{{ v_id }}?title=0&byline=0&portrait=0"
+        title="{{ v_title }}"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        loading="lazy"
+        class="video-embed__iframe"
+      ></iframe>
+    </div>
+    <p class="video-embed__caption">
+      📺 <a href="https://vimeo.com/{{ v_id }}" target="_blank" rel="noopener noreferrer">Watch on Vimeo</a>
+    </p>
+
+  {% elsif v_type == "notebooklm" %}
+    {% comment %} NotebookLM Video / Presentation Embed {% endcomment %}
+    <div class="video-embed__container video-embed__container--notebooklm">
+      <div class="video-embed__badge">
+        <span>🔬 NotebookLM Presentation</span>
+      </div>
+      <iframe
+        src="https://notebooklm.google.com/notebook/{{ v_id }}"
+        title="{{ v_title }}"
+        loading="lazy"
+        class="video-embed__iframe"
+        sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+      ></iframe>
+    </div>
+    <p class="video-embed__caption">
+      🔬 Content from <a href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer">Google NotebookLM</a>
+    </p>
+
+  {% else %}
+    {% comment %} Fallback: treat as YouTube {% endcomment %}
+    <div class="video-embed__container">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/{{ v_id }}?rel=0&modestbranding=1"
+        title="{{ v_title }}"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        loading="lazy"
+        class="video-embed__iframe"
+      ></iframe>
+    </div>
+  {% endif %}
+</div>

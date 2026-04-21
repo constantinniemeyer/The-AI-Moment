@@ -1,0 +1,117 @@
+{% comment %}
+  NotebookLM Podcast Embed Include
+  
+  Usage in front matter (post.html uses these automatically):
+    podcast_id: "YOUR_NOTEBOOK_ID"
+    podcast_type: "notebooklm"   # or "anchor", "spotify", "soundcloud"
+  
+  Or inline in markdown:
+    {% include podcast-embed.html
+       podcast_id="YOUR_NOTEBOOK_ID"
+       podcast_type="notebooklm"
+       podcast_title="Episode Title" %}
+
+  NotebookLM share URL format:
+    https://notebooklm.google.com/notebook/[NOTEBOOK_ID]
+  
+  The embed uses the audio player endpoint from NotebookLM.
+{% endcomment %}
+
+{% assign p_type = include.podcast_type | default: "notebooklm" %}
+{% assign p_id = include.podcast_id %}
+{% assign p_title = include.podcast_title | default: "AI Podcast Episode" %}
+
+<div class="podcast-embed" role="region" aria-label="Podcast: {{ p_title }}">
+  {% if p_type == "notebooklm" %}
+    {% comment %} NotebookLM Audio Overview Embed {% endcomment %}
+    <div class="podcast-embed__player podcast-embed__player--notebooklm">
+      <div class="podcast-embed__badge">
+        <span class="podcast-embed__badge-icon">🎙️</span>
+        <span>NotebookLM Audio Overview</span>
+      </div>
+      <iframe
+        src="https://notebooklm.google.com/notebook/{{ p_id }}/audio"
+        title="{{ p_title }}"
+        allow="autoplay"
+        loading="lazy"
+        class="podcast-embed__iframe"
+        sandbox="allow-scripts allow-same-origin allow-popups"
+      ></iframe>
+      <p class="podcast-embed__caption">
+        🎧 AI-generated podcast by
+        <a href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer">Google NotebookLM</a>
+      </p>
+    </div>
+
+  {% elsif p_type == "spotify" %}
+    {% comment %} Spotify Podcast Embed {% endcomment %}
+    <div class="podcast-embed__player podcast-embed__player--spotify">
+      <iframe
+        src="https://open.spotify.com/embed/episode/{{ p_id }}"
+        width="100%"
+        height="152"
+        title="{{ p_title }}"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        class="podcast-embed__iframe"
+      ></iframe>
+    </div>
+
+  {% elsif p_type == "anchor" or p_type == "spotify-show" %}
+    {% comment %} Anchor / Spotify Show Embed {% endcomment %}
+    <div class="podcast-embed__player podcast-embed__player--anchor">
+      <iframe
+        src="https://anchor.fm/{{ p_id }}/embed"
+        height="160"
+        width="100%"
+        title="{{ p_title }}"
+        loading="lazy"
+        class="podcast-embed__iframe"
+      ></iframe>
+    </div>
+
+  {% elsif p_type == "soundcloud" %}
+    {% comment %} SoundCloud Embed {% endcomment %}
+    <div class="podcast-embed__player podcast-embed__player--soundcloud">
+      <iframe
+        width="100%"
+        height="166"
+        scrolling="no"
+        allow="autoplay"
+        loading="lazy"
+        class="podcast-embed__iframe"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ p_id }}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"
+        title="{{ p_title }}"
+      ></iframe>
+    </div>
+
+  {% elsif p_type == "audio" %}
+    {% comment %} Direct audio file embed {% endcomment %}
+    <div class="podcast-embed__player podcast-embed__player--audio">
+      <audio controls class="podcast-embed__audio" preload="metadata">
+        <source src="{{ p_id }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+  {% else %}
+    <div class="podcast-embed__player podcast-embed__player--notebooklm">
+      <div class="podcast-embed__badge">
+        <span class="podcast-embed__badge-icon">🎙️</span>
+        <span>NotebookLM Audio Overview</span>
+      </div>
+      <iframe
+        src="https://notebooklm.google.com/notebook/{{ p_id }}/audio"
+        title="{{ p_title }}"
+        allow="autoplay"
+        loading="lazy"
+        class="podcast-embed__iframe"
+        sandbox="allow-scripts allow-same-origin allow-popups"
+      ></iframe>
+      <p class="podcast-embed__caption">
+        🎧 AI-generated podcast by
+        <a href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer">Google NotebookLM</a>
+      </p>
+    </div>
+  {% endif %}
+</div>

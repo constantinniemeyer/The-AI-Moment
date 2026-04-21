@@ -1,0 +1,91 @@
+---
+layout: default
+---
+<div class="home">
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ site.title }}</h1>
+      <p class="hero-description">{{ site.description }}</p>
+      <div class="hero-nav">
+        <a href="{{ '/articles/' | relative_url }}" class="btn btn-primary">Browse Articles</a>
+        <a href="{{ '/podcasts/' | relative_url }}" class="btn btn-secondary">Listen to Podcasts</a>
+        <a href="{{ '/videos/' | relative_url }}" class="btn btn-secondary">Watch Videos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="latest-posts">
+    <div class="section-header">
+      <h2>Latest Posts</h2>
+      <a href="{{ '/articles/' | relative_url }}" class="view-all">View all &rarr;</a>
+    </div>
+
+    <div class="post-grid">
+      {% for post in site.posts limit:6 %}
+        <article class="post-card {% if post.podcast_id %}has-podcast{% endif %} {% if post.video_id %}has-video{% endif %}">
+          <div class="post-card-body">
+            <div class="post-card-meta">
+              <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+              {% if post.categories %}
+                {% for category in post.categories limit:2 %}
+                  <span class="category-tag category-tag--small">{{ category }}</span>
+                {% endfor %}
+              {% endif %}
+              {% if post.podcast_id %}
+                <span class="media-badge media-badge--podcast">🎙️ Podcast</span>
+              {% endif %}
+              {% if post.video_id %}
+                <span class="media-badge media-badge--video">🎬 Video</span>
+              {% endif %}
+            </div>
+            <h3 class="post-card-title">
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h3>
+            {% if post.excerpt %}
+              <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            {% endif %}
+          </div>
+          <div class="post-card-footer">
+            <a href="{{ post.url | relative_url }}" class="read-more">Read more &rarr;</a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="topics">
+    <h2>Explore Topics</h2>
+    <div class="topic-grid">
+      <div class="topic-card">
+        <div class="topic-icon">🤖</div>
+        <h3>AI Technology</h3>
+        <p>Latest breakthroughs in large language models, generative AI, and machine learning research.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-icon">💼</div>
+        <h3>Economic Impact</h3>
+        <p>How AI is reshaping industries, labor markets, productivity, and economic growth.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-icon">🌐</div>
+        <h3>Social Impact</h3>
+        <p>AI's effects on society, education, healthcare, privacy, and human relationships.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-icon">⚖️</div>
+        <h3>AI Policy</h3>
+        <p>Governance, regulation, ethics, and the global race to shape AI's future.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-icon">🎙️</div>
+        <h3>Podcasts</h3>
+        <p>AI-generated deep dives and NotebookLM podcast discussions on key AI topics.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-icon">🎬</div>
+        <h3>Videos</h3>
+        <p>Visual explainers, interviews, and documentary content about AI developments.</p>
+      </div>
+    </div>
+  </section>
+</div>
