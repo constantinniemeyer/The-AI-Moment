@@ -5,8 +5,8 @@ subtitle: "A survey of economists' findings on AI's effect on productivity, labo
 date: 2025-02-15 00:00:00 +0000
 categories: [Economics]
 tags: [labour, productivity, automation, wages, growth]
-# podcast_id: "your-notebooklm-notebook-id"  # Uncomment and set to embed a podcast
-# podcast_type: "notebooklm"
+podcast_id: "c2669cd9-d6aa-4ecd-bbaa-9da563919b08"
+podcast_type: "notebooklm"
 source_url: "https://www.nber.org/papers/w31161"
 source_name: "NBER Working Paper — GPTs are GPTs"
 further_reading:
