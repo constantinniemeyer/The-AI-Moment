@@ -7,7 +7,7 @@ setup:
 	bundle install
 
 serve:
-	$(RUBY_BUNDLE) jekyll serve --livereload --drafts
+	$(RUBY_BUNDLE) jekyll serve --livereload --livereload-port 35730 --drafts
 
 build-local:
 	$(RUBY_BUNDLE) jekyll build --config _config.yml --destination _site_local

@@ -7,21 +7,21 @@ categories: [Meta]
 tags: [welcome, introduction]
 ---
 
-We are living through an extraordinary moment in history. Artificial intelligence — once confined to research labs and science fiction — has crossed a threshold and entered everyday life, reshaping how we work, communicate, create, and think.
+Humanity has reached a rare turning point. Artificial intelligence—once the preserve of academic labs and novelists—has finally entered the wild. In doing so, it is rewriting the rules of how we work, talk, and think.
+**The AI Moment** is a field guide to this transition. Here, we track the upheaval through:
 
-**The AI Moment** is a curated resource for tracking this transformation. Here you will find:
+- **Whiteboard Theory**: Summaries of the latest skirmishes in research, industry, and regulation. 
+- **The Bottom Line**: Analysis of how silicon is reshaping labour markets and business models. 
+- **The Social Ledger**: Exploring the algorithmic impact on politics, culture and society at large. 
+- **Applied Intelligence**: A pragmatic guide to putting the AI boffins to work, from DIY software development to the subtle art of the prompt.
 
-- **Articles** referencing and summarising key developments in AI research, industry, and policy
-- **Economic analysis** of how AI is changing labour markets, productivity, and business models
-- **Social impact** reporting on AI's effects on education, healthcare, creativity, and society
-- **Podcasts** generated with Google NotebookLM — AI-synthesised conversations on important AI topics
-- **Videos** — curated explainers, interviews, and documentaries
+Throughout the posts, we use AI generated material, because what better way to understand the technology than by experiencing it firsthand? Expect:
+- **Synthetic Talk**: Podcasts via Google’s NotebookLM—AI-generated debates on the technology’s trajectory. 
+- **The Big Picture**: Curated videos and interviews for a clearer view of the landscape.
 
-## Why Now?
-
-The pace of AI development has accelerated dramatically. Since 2022, large language models have moved from laboratory curiosities to tools used by hundreds of millions of people. Generative AI is now embedded in search engines, productivity software, creative tools, and coding environments.
-
-This is not a distant future. It is happening now, and its implications — economic, social, political, and philosophical — are still being worked out.
+## Why the rush?
+The pace of change has shifted from a crawl to a sprint. Since 2022, large language models have graduated from laboratory curiosities to ubiquitous tools. Generative AI is no longer a "coming attraction"; it is already hard at work in your search bar and your spreadsheets.
+The future has arrived ahead of schedule. While the economic and political dust has yet to settle, the transformation is well under way.
 
 ## How to Use This Site
 
