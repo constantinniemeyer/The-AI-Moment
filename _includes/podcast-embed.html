@@ -91,8 +91,19 @@
   {% elsif p_type == "audio" %}
     {% comment %} Direct audio file embed {% endcomment %}
     <div class="podcast-embed__player podcast-embed__player--audio">
+      {% if p_title != "AI Podcast Episode" %}
+        <div class="podcast-embed__badge">
+          <span class="podcast-embed__badge-icon">🎙️</span>
+          <span>{{ p_title }}</span>
+        </div>
+      {% endif %}
       <audio controls class="podcast-embed__audio" preload="metadata">
-        <source src="{{ p_id | relative_url }}" type="audio/mpeg">
+        {% assign p_ext = p_id | split: "." | last %}
+        {% if p_ext == "m4a" %}
+          <source src="{{ p_id | relative_url }}" type="audio/mp4">
+        {% else %}
+          <source src="{{ p_id | relative_url }}" type="audio/mpeg">
+        {% endif %}
         Your browser does not support the audio element.
       </audio>
     </div>
