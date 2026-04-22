@@ -17,6 +17,10 @@ Dieses Dokument dokumentiert regelmäßige Cleanup- und Wartungsaktivitäten fue
 - [x] SSH-Keys zu `.gitignore` hinzugefügt (`githubSSHKey*`)
 - [x] Build-Artefakte in `.gitignore` präzisiert (`_site_*`, `.jekyll-cache/`)
 - [x] Legacy `deploy.yml` Workflow entfernt (redundant mit neuen `integration-deploy.yml` + `production-deploy.yml`)
+- [x] `_config.yml` optimiert (redundante `vendor/*` exclude-Regeln entfernt)
+- [x] Frontmatter-Konsistenz aller Posts überprüft (✓ konsistent)
+- [x] CSS/JS Code-Quality überprüft (✓ sauber und minimal)
+- [x] Alle Layouts/Includes sind referenziert (✓ keine Duplikate/Orphans)
 
 ---
 
@@ -219,4 +223,3 @@ Falls während des Cleanup Unklarheiten entstehen:
 - Vor Loeschen immer in git-history pruefen (z. B. `git log -p <file>`)
 - Dokumentieren, warum etwas geaendert wurde
 - Bei Breaking Changes: CHANGELOG aktualisieren
-
