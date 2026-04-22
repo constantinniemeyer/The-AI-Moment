@@ -110,15 +110,30 @@
 
 <hr />
 
+<h2 id="durchgeführte-cleanups">Durchgeführte Cleanups</h2>
+
+<h3 id="2026-04-22-initial-code-cleanup">2026-04-22: Initial Code Cleanup</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />SSH-Keys zu <code class="language-plaintext highlighter-rouge">.gitignore</code> hinzugefügt (<code class="language-plaintext highlighter-rouge">githubSSHKey*</code>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Build-Artefakte in <code class="language-plaintext highlighter-rouge">.gitignore</code> präzisiert (<code class="language-plaintext highlighter-rouge">_site_*</code>, <code class="language-plaintext highlighter-rouge">.jekyll-cache/</code>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Legacy <code class="language-plaintext highlighter-rouge">deploy.yml</code> Workflow entfernt (redundant mit neuen <code class="language-plaintext highlighter-rouge">integration-deploy.yml</code> + <code class="language-plaintext highlighter-rouge">production-deploy.yml</code>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><code class="language-plaintext highlighter-rouge">_config.yml</code> optimiert (redundante <code class="language-plaintext highlighter-rouge">vendor/*</code> exclude-Regeln entfernt)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Frontmatter-Konsistenz aller Posts überprüft (✓ konsistent)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />CSS/JS Code-Quality überprüft (✓ sauber und minimal)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Alle Layouts/Includes sind referenziert (✓ keine Duplikate/Orphans)</li>
+</ul>
+
+<hr />
+
 <h2 id="1-code-cleanup">1. Code-Cleanup</h2>
 
 <h3 id="11-jekyll-konfiguration-_configyml-_config_integrationyml">1.1 Jekyll-Konfiguration (<code class="language-plaintext highlighter-rouge">_config.yml</code>, <code class="language-plaintext highlighter-rouge">_config_integration.yml</code>)</h3>
 <ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><code class="language-plaintext highlighter-rouge">site.url</code> und <code class="language-plaintext highlighter-rouge">site.baseurl</code> mit Project-Pages-Pfaden abgeglichen (<code class="language-plaintext highlighter-rouge">/The-AI-Moment</code>, <code class="language-plaintext highlighter-rouge">/The-AI-Moment/staging</code>)</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Ungenutzte Plugins entfernen oder aktivieren</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Veraltete Liquid-Filter/Tags pruefen</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Redundante Eintraege in <code class="language-plaintext highlighter-rouge">defaults</code> entfernen</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">exclude</code>-Regeln auf Notwendigkeit pruefen</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">site.url</code> und <code class="language-plaintext highlighter-rouge">site.baseurl</code> mit neuen Pages-Pfaden abgleichen</li>
 </ul>
 
 <h3 id="12-layoutinclude-dateien-_layouts-_includes">1.2 Layout/Include-Dateien (<code class="language-plaintext highlighter-rouge">_layouts/</code>, <code class="language-plaintext highlighter-rouge">_includes/</code>)</h3>
@@ -131,17 +146,17 @@
 
 <h3 id="13-css-assetscssmaincss">1.3 CSS (<code class="language-plaintext highlighter-rouge">assets/css/main.css</code>)</h3>
 <ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />CSS-Review durchgefuehrt - sauber, gut strukturiert</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Ungenutzte CSS-Regeln entfernen (grep nach Klassen in Layouts)</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Duplikate/Ueberschreibungen konsolidieren</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Vendor-Prefixes aktualisieren (z. B. <code class="language-plaintext highlighter-rouge">-webkit-</code>, <code class="language-plaintext highlighter-rouge">-moz-</code>)</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Dark Mode / Responsive Design pruefen</li>
 </ul>
 
 <h3 id="14-javascript-assetsjsmainjs">1.4 JavaScript (<code class="language-plaintext highlighter-rouge">assets/js/main.js</code>)</h3>
 <ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />JS-Review durchgefuehrt - minimal, fokussiert auf Mobile Nav Toggle</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Ungenutzte Funktionen entfernen</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Globale Variablen minimieren</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Konsolen-Logs in Production entfernen</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Error-Handling ueberpruefen</li>
 </ul>
 
@@ -160,26 +175,27 @@
 
 <h3 id="21-github-actions-workflows-githubworkflows">2.1 GitHub Actions Workflows (<code class="language-plaintext highlighter-rouge">.github/workflows/</code>)</h3>
 <ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><code class="language-plaintext highlighter-rouge">actions/checkout@v4</code> -&gt; <code class="language-plaintext highlighter-rouge">actions/checkout@v5</code> in allen Workflows</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Concurrency-Gruppen harmonisiert (<code class="language-plaintext highlighter-rouge">gh-pages-deploy</code>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Legacy <code class="language-plaintext highlighter-rouge">deploy.yml</code> entfernt</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Veraltete Actions upgraden (z. B. <code class="language-plaintext highlighter-rouge">actions/checkout@v5</code> -&gt; <code class="language-plaintext highlighter-rouge">v6</code>)</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Node.js/Ruby-Versionen mit aktuellen LTS vergleichen</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Timeouts auf realistisch setzen (nicht zu kurz, nicht zu lang)</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Concurrency-Gruppen auf Duplikate pruefen</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Ungenutzte Workflows loeschen (z. B. alte <code class="language-plaintext highlighter-rouge">deploy.yml</code> wenn redundant)</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Secrets &amp; Token-Scopes minimal halten</li>
 </ul>
 
 <h3 id="22-deploy-flows-integration-deployyml-production-deployyml">2.2 Deploy-Flows (<code class="language-plaintext highlighter-rouge">integration-deploy.yml</code>, <code class="language-plaintext highlighter-rouge">production-deploy.yml</code>)</h3>
 <ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Concurrency serialisiert (verhindert <code class="language-plaintext highlighter-rouge">gh-pages</code> Ref-Lock-Race)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Environment-Gates aktiviert (<code class="language-plaintext highlighter-rouge">integration</code>, <code class="language-plaintext highlighter-rouge">production</code>)</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Redundante Build-Steps konsolidieren</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Destination-Dirs (<code class="language-plaintext highlighter-rouge">_site_staging</code>, <code class="language-plaintext highlighter-rouge">_site_prod</code>) pruefen auf noetige Unterschiede</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">keep_files: true</code> Policy ueberpruefen (Speicher-Wachstum)</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Notifications/Alerts pruefen (falls vorhanden)</li>
 </ul>
 
 <h3 id="23-branching-policy">2.3 Branching Policy</h3>
 <ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Branch-Policy-Validierung in <code class="language-plaintext highlighter-rouge">ci.yml</code> implementiert</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verwaiste Branches aufloesen (<code class="language-plaintext highlighter-rouge">git branch -r</code> pruefen)</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Obsolete Protection Rules entfernen</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Branch Naming Conventions nochmal pruefen</li>
 </ul>
 
@@ -189,23 +205,23 @@
 
 <h3 id="31-readmemd">3.1 README.md</h3>
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Veraltete URLs aktualisieren</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Setup-Schritte gegen <code class="language-plaintext highlighter-rouge">Makefile</code> abgleichen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />URLs auf Project-Pages abgeglichen (<code class="language-plaintext highlighter-rouge">/The-AI-Moment/</code>, <code class="language-plaintext highlighter-rouge">/The-AI-Moment/staging/</code>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Setup-Schritte gegen <code class="language-plaintext highlighter-rouge">Makefile</code> abgeglichen</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Typos beheben</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Links auf interne Docs pruefen (<code class="language-plaintext highlighter-rouge">docs/</code>, <code class="language-plaintext highlighter-rouge">CHANGELOG</code>, etc.)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Links auf interne Docs pruefen</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Versionsnummern aktualisieren (Ruby, Bundler, Actions)</li>
 </ul>
 
 <h3 id="32-docs">3.2 Docs/</h3>
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">branching-ci-policy.md</code> auf Aktualitaet pruefen</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">cleanup.md</code> selbst updaten (diese Datei)</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Veraltete technische Entscheidungen dokumentieren oder archivieren</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><code class="language-plaintext highlighter-rouge">cleanup.md</code> erstellt (diese Datei)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><code class="language-plaintext highlighter-rouge">branching-ci-policy.md</code> dokumentiert</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Veraltete technische Entscheidungen archivieren</li>
 </ul>
 
 <h3 id="33-templates">3.3 Templates</h3>
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">.github/pull_request_template.md</code> auf Aktualitaet pruefen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><code class="language-plaintext highlighter-rouge">.github/pull_request_template.md</code> erstellt</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Ungenutzte Issue-Templates loeschen</li>
 </ul>
 
@@ -215,6 +231,7 @@
 
 <h3 id="41-gemfile--bundler">4.1 Gemfile / Bundler</h3>
 <ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Gemfile reviewed - minimal und auf GitHub-Pages optimiert</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">gem list</code> durchgehen, ungenutzte Gems entfernen</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Gem-Versionen pruefen auf Sicherheitsupdates (<code class="language-plaintext highlighter-rouge">bundle audit</code>)</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />GitHub-Pages-Kompatibilitaet verifizieren</li>
@@ -222,9 +239,9 @@
 
 <h3 id="42-gitignore">4.2 .gitignore</h3>
 <ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />SSH-Keys hinzugefuegt</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Build-Artefakte praezisiert</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Veraltete Ignore-Regeln entfernen</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Neue Build-Artefakte hinzufuegen (falls noetig)</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Duplikate eliminieren</li>
 </ul>
 
 <hr />
@@ -369,7 +386,6 @@ git commit <span class="nt">-m</span> <span class="s2">"chore: cleanup section-X
   <li>Dokumentieren, warum etwas geaendert wurde</li>
   <li>Bei Breaking Changes: CHANGELOG aktualisieren</li>
 </ul>
-
 
   </div>
 </div>

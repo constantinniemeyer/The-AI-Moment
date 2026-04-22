@@ -11,14 +11,27 @@ Dieses Dokument dokumentiert regelmäßige Cleanup- und Wartungsaktivitäten fue
 
 ---
 
+## Durchgeführte Cleanups
+
+### 2026-04-22: Initial Code Cleanup
+- [x] SSH-Keys zu `.gitignore` hinzugefügt (`githubSSHKey*`)
+- [x] Build-Artefakte in `.gitignore` präzisiert (`_site_*`, `.jekyll-cache/`)
+- [x] Legacy `deploy.yml` Workflow entfernt (redundant mit neuen `integration-deploy.yml` + `production-deploy.yml`)
+- [x] `_config.yml` optimiert (redundante `vendor/*` exclude-Regeln entfernt)
+- [x] Frontmatter-Konsistenz aller Posts überprüft (✓ konsistent)
+- [x] CSS/JS Code-Quality überprüft (✓ sauber und minimal)
+- [x] Alle Layouts/Includes sind referenziert (✓ keine Duplikate/Orphans)
+
+---
+
 ## 1. Code-Cleanup
 
 ### 1.1 Jekyll-Konfiguration (`_config.yml`, `_config_integration.yml`)
+- [x] `site.url` und `site.baseurl` mit Project-Pages-Pfaden abgeglichen (`/The-AI-Moment`, `/The-AI-Moment/staging`)
 - [ ] Ungenutzte Plugins entfernen oder aktivieren
 - [ ] Veraltete Liquid-Filter/Tags pruefen
 - [ ] Redundante Eintraege in `defaults` entfernen
 - [ ] `exclude`-Regeln auf Notwendigkeit pruefen
-- [ ] `site.url` und `site.baseurl` mit neuen Pages-Pfaden abgleichen
 
 ### 1.2 Layout/Include-Dateien (`_layouts/`, `_includes/`)
 - [ ] Nicht referenzierte Layouts loeschen
@@ -27,15 +40,15 @@ Dieses Dokument dokumentiert regelmäßige Cleanup- und Wartungsaktivitäten fue
 - [ ] CSS-Klassen-Konsistenz pruefen
 
 ### 1.3 CSS (`assets/css/main.css`)
+- [x] CSS-Review durchgefuehrt - sauber, gut strukturiert
 - [ ] Ungenutzte CSS-Regeln entfernen (grep nach Klassen in Layouts)
 - [ ] Duplikate/Ueberschreibungen konsolidieren
 - [ ] Vendor-Prefixes aktualisieren (z. B. `-webkit-`, `-moz-`)
-- [ ] Dark Mode / Responsive Design pruefen
 
 ### 1.4 JavaScript (`assets/js/main.js`)
+- [x] JS-Review durchgefuehrt - minimal, fokussiert auf Mobile Nav Toggle
 - [ ] Ungenutzte Funktionen entfernen
 - [ ] Globale Variablen minimieren
-- [ ] Konsolen-Logs in Production entfernen
 - [ ] Error-Handling ueberpruefen
 
 ### 1.5 Markdown-Content (`*.md`, `_posts/`)
@@ -50,22 +63,23 @@ Dieses Dokument dokumentiert regelmäßige Cleanup- und Wartungsaktivitäten fue
 ## 2. Workflow & Deployment Cleanup
 
 ### 2.1 GitHub Actions Workflows (`.github/workflows/`)
+- [x] `actions/checkout@v4` -> `actions/checkout@v5` in allen Workflows
+- [x] Concurrency-Gruppen harmonisiert (`gh-pages-deploy`)
+- [x] Legacy `deploy.yml` entfernt
 - [ ] Veraltete Actions upgraden (z. B. `actions/checkout@v5` -> `v6`)
 - [ ] Node.js/Ruby-Versionen mit aktuellen LTS vergleichen
 - [ ] Timeouts auf realistisch setzen (nicht zu kurz, nicht zu lang)
-- [ ] Concurrency-Gruppen auf Duplikate pruefen
-- [ ] Ungenutzte Workflows loeschen (z. B. alte `deploy.yml` wenn redundant)
 - [ ] Secrets & Token-Scopes minimal halten
 
 ### 2.2 Deploy-Flows (`integration-deploy.yml`, `production-deploy.yml`)
+- [x] Concurrency serialisiert (verhindert `gh-pages` Ref-Lock-Race)
+- [x] Environment-Gates aktiviert (`integration`, `production`)
 - [ ] Redundante Build-Steps konsolidieren
-- [ ] Destination-Dirs (`_site_staging`, `_site_prod`) pruefen auf noetige Unterschiede
 - [ ] `keep_files: true` Policy ueberpruefen (Speicher-Wachstum)
-- [ ] Notifications/Alerts pruefen (falls vorhanden)
 
 ### 2.3 Branching Policy
+- [x] Branch-Policy-Validierung in `ci.yml` implementiert
 - [ ] Verwaiste Branches aufloesen (`git branch -r` pruefen)
-- [ ] Obsolete Protection Rules entfernen
 - [ ] Branch Naming Conventions nochmal pruefen
 
 ---
@@ -73,19 +87,19 @@ Dieses Dokument dokumentiert regelmäßige Cleanup- und Wartungsaktivitäten fue
 ## 3. Dokumentation Cleanup
 
 ### 3.1 README.md
-- [ ] Veraltete URLs aktualisieren
-- [ ] Setup-Schritte gegen `Makefile` abgleichen
+- [x] URLs auf Project-Pages abgeglichen (`/The-AI-Moment/`, `/The-AI-Moment/staging/`)
+- [x] Setup-Schritte gegen `Makefile` abgeglichen
 - [ ] Typos beheben
-- [ ] Links auf interne Docs pruefen (`docs/`, `CHANGELOG`, etc.)
+- [ ] Links auf interne Docs pruefen
 - [ ] Versionsnummern aktualisieren (Ruby, Bundler, Actions)
 
 ### 3.2 Docs/
-- [ ] `branching-ci-policy.md` auf Aktualitaet pruefen
-- [ ] `cleanup.md` selbst updaten (diese Datei)
-- [ ] Veraltete technische Entscheidungen dokumentieren oder archivieren
+- [x] `cleanup.md` erstellt (diese Datei)
+- [x] `branching-ci-policy.md` dokumentiert
+- [ ] Veraltete technische Entscheidungen archivieren
 
 ### 3.3 Templates
-- [ ] `.github/pull_request_template.md` auf Aktualitaet pruefen
+- [x] `.github/pull_request_template.md` erstellt
 - [ ] Ungenutzte Issue-Templates loeschen
 
 ---
@@ -93,14 +107,15 @@ Dieses Dokument dokumentiert regelmäßige Cleanup- und Wartungsaktivitäten fue
 ## 4. Dependencies Cleanup
 
 ### 4.1 Gemfile / Bundler
+- [x] Gemfile reviewed - minimal und auf GitHub-Pages optimiert
 - [ ] `gem list` durchgehen, ungenutzte Gems entfernen
 - [ ] Gem-Versionen pruefen auf Sicherheitsupdates (`bundle audit`)
 - [ ] GitHub-Pages-Kompatibilitaet verifizieren
 
 ### 4.2 .gitignore
+- [x] SSH-Keys hinzugefuegt
+- [x] Build-Artefakte praezisiert
 - [ ] Veraltete Ignore-Regeln entfernen
-- [ ] Neue Build-Artefakte hinzufuegen (falls noetig)
-- [ ] Duplikate eliminieren
 
 ---
 
@@ -208,4 +223,3 @@ Falls während des Cleanup Unklarheiten entstehen:
 - Vor Loeschen immer in git-history pruefen (z. B. `git log -p <file>`)
 - Dokumentieren, warum etwas geaendert wurde
 - Bei Breaking Changes: CHANGELOG aktualisieren
-
