@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Testing Instructions for Cleanup Branch | The AI Moment</title>
+<meta name="description" content="Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution.">
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Testing Instructions for Cleanup Branch">
+<meta property="og:description" content="Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution.">
+<meta property="og:url" content="https://constantinniemeyer.github.io/The-AI-Moment/docs/testing-instructions/">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://constantinniemeyer.github.io/The-AI-Moment/docs/testing-instructions/">
+
+<!-- Styles -->
+<link rel="stylesheet" href="/The-AI-Moment/assets/css/main.css">
+
+<!-- RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title="The AI Moment" href="/The-AI-Moment/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Testing Instructions for Cleanup Branch | The AI Moment</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Testing Instructions for Cleanup Branch" />
+<meta name="author" content="The AI Moment" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution." />
+<meta property="og:description" content="Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution." />
+<link rel="canonical" href="https://constantinniemeyer.github.io/The-AI-Moment/docs/testing-instructions/" />
+<meta property="og:url" content="https://constantinniemeyer.github.io/The-AI-Moment/docs/testing-instructions/" />
+<meta property="og:site_name" content="The AI Moment" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Testing Instructions for Cleanup Branch" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"The AI Moment"},"description":"Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution.","headline":"Testing Instructions for Cleanup Branch","url":"https://constantinniemeyer.github.io/The-AI-Moment/docs/testing-instructions/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="container">
+    <div class="site-header-inner">
+      <a href="/The-AI-Moment/" class="site-logo">
+        <span class="site-logo-icon">⚡</span>
+        <span class="site-logo-text">The AI Moment</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
+        <ul class="nav-list">
+          
+            <li class="nav-item ">
+              <a href="/The-AI-Moment/" class="nav-link">Home</a>
+            </li>
+          
+            <li class="nav-item ">
+              <a href="/The-AI-Moment/articles/" class="nav-link">Articles</a>
+            </li>
+          
+            <li class="nav-item ">
+              <a href="/The-AI-Moment/podcasts/" class="nav-link">Podcasts</a>
+            </li>
+          
+            <li class="nav-item ">
+              <a href="/The-AI-Moment/videos/" class="nav-link">Videos</a>
+            </li>
+          
+            <li class="nav-item ">
+              <a href="/The-AI-Moment/about/" class="nav-link">About</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <main class="main-content">
+      <div class="container">
+        <div class="page">
+  <header class="page-header">
+    <h1 class="page-title">Testing Instructions for Cleanup Branch</h1>
+    
+  </header>
+
+  <div class="page-content">
+    <h1 id="testing-instructions-for-cleanup-branch">Testing Instructions for Cleanup Branch</h1>
+
+<p>Dieses Dokument führt dich durch alle notwendigen Tests <strong>vor</strong> dem finalen PR merge.</p>
+
+<hr />
+
+<h2 id="-checklist-tests-durchführen">✅ Checklist: Tests durchführen</h2>
+
+<p>Führe diese Tests <strong>genau in dieser Reihenfolge</strong> aus und häke ab, wenn grün:</p>
+
+<hr />
+
+<h3 id="phase-1-lokale-builds-15-min">Phase 1: Lokale Builds (15 min)</h3>
+
+<h4 id="test-11-local-build">Test 1.1: Local Build</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /home/consti/AndroidStudioProjects/The-AI-Moment
+make clean
+make build-local
+</code></pre></div></div>
+<p><strong>Erwartet:</strong> ✓ Build erfolgreich, keine Fehler
+<strong>Häkchen:</strong> [ ]</p>
+
+<h4 id="test-12-integration-build">Test 1.2: Integration Build</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make clean
+make build-integration
+</code></pre></div></div>
+<p><strong>Erwartet:</strong> ✓ Build erfolgreich, baseurl sollte <code class="language-plaintext highlighter-rouge">/The-AI-Moment/staging</code> sein
+<strong>Prüfen:</strong> <code class="language-plaintext highlighter-rouge">grep "baseurl" _site_staging/index.html</code> sollte Staging-Pfad enthalten
+<strong>Häkchen:</strong> [ ]</p>
+
+<h4 id="test-13-production-build">Test 1.3: Production Build</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make clean
+make build-production
+</code></pre></div></div>
+<p><strong>Erwartet:</strong> ✓ Build erfolgreich, baseurl sollte <code class="language-plaintext highlighter-rouge">/The-AI-Moment</code> sein
+<strong>Prüfen:</strong> <code class="language-plaintext highlighter-rouge">grep "baseurl" _site_prod/index.html</code> sollte Production-Pfad enthalten
+<strong>Häkchen:</strong> [ ]</p>
+
+<hr />
+
+<h3 id="phase-2-datei-integrität-5-min">Phase 2: Datei-Integrität (5 min)</h3>
+
+<h4 id="test-21-ssh-keys-sollten-nicht-im-repo-sein">Test 2.1: SSH-Keys sollten NICHT im Repo sein</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /home/consti/AndroidStudioProjects/The-AI-Moment
+git status | <span class="nb">grep</span> <span class="nt">-i</span> <span class="s2">"github"</span>
+</code></pre></div></div>
+<p><strong>Erwartet:</strong> ✓ Keine SSH-Keys in <code class="language-plaintext highlighter-rouge">git status</code> (sollten ignoriert sein)
+<strong>Häkchen:</strong> [ ]</p>
+
+<h4 id="test-22-legacy-workflow-ist-gelöscht">Test 2.2: Legacy Workflow ist gelöscht</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-la</span> .github/workflows/deploy.yml
+</code></pre></div></div>
+<p><strong>Erwartet:</strong> ✗ Datei sollte NICHT existieren (not found)
+<strong>Häkchen:</strong> [ ]</p>
+
+<h4 id="test-23-neue-workflows-existieren">Test 2.3: Neue Workflows existieren</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> .github/workflows/
+</code></pre></div></div>
+<p><strong>Erwartet:</strong> ✓ Sollte enthalten: <code class="language-plaintext highlighter-rouge">ci.yml</code>, <code class="language-plaintext highlighter-rouge">integration-deploy.yml</code>, <code class="language-plaintext highlighter-rouge">production-deploy.yml</code>
+<strong>Häkchen:</strong> [ ]</p>
+
+<hr />
+
+<h3 id="phase-3-config-konsistenz-5-min">Phase 3: Config-Konsistenz (5 min)</h3>
+
+<h4 id="test-31-baseurl-in-_configyml">Test 3.1: baseurl in _config.yml</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">grep</span> <span class="s2">"baseurl:"</span> _config.yml
+</code></pre></div></div>
+<p><strong>Erwartet:</strong> <code class="language-plaintext highlighter-rouge">baseurl: "/The-AI-Moment"</code>
+<strong>Häkchen:</strong> [ ]</p>
+
+<h4 id="test-32-baseurl-in-_config_integrationyml">Test 3.2: baseurl in _config_integration.yml</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">grep</span> <span class="s2">"baseurl:"</span> _config_integration.yml
+</code></pre></div></div>
+<p><strong>Erwartet:</strong> <code class="language-plaintext highlighter-rouge">baseurl: "/The-AI-Moment/staging"</code>
+<strong>Häkchen:</strong> [ ]</p>
+
+<h4 id="test-33-exclude-regeln-optimiert">Test 3.3: Exclude-Regeln optimiert</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">grep</span> <span class="nt">-A</span> 10 <span class="s2">"exclude:"</span> _config.yml
+</code></pre></div></div>
+<p><strong>Erwartet:</strong> ✓ Sollte <strong>NICHT</strong> enthalten: <code class="language-plaintext highlighter-rouge">vendor/bundle/</code>, <code class="language-plaintext highlighter-rouge">vendor/cache/</code>, <code class="language-plaintext highlighter-rouge">vendor/gems/</code>, <code class="language-plaintext highlighter-rouge">vendor/ruby/</code>
+<strong>Häkchen:</strong> [ ]</p>
+
+<hr />
+
+<h3 id="phase-4-post-frontmatter-5-min">Phase 4: Post-Frontmatter (5 min)</h3>
+
+<h4 id="test-41-alle-posts-haben-frontmatter">Test 4.1: Alle Posts haben Frontmatter</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>f <span class="k">in </span>_posts/<span class="k">*</span>.md<span class="p">;</span> <span class="k">do </span><span class="nb">echo</span> <span class="s2">"=== </span><span class="nv">$f</span><span class="s2"> ==="</span><span class="p">;</span> <span class="nb">head</span> <span class="nt">-2</span> <span class="s2">"</span><span class="nv">$f</span><span class="s2">"</span><span class="p">;</span> <span class="k">done</span>
+</code></pre></div></div>
+<p><strong>Erwartet:</strong> ✓ Jeder Post startet mit <code class="language-plaintext highlighter-rouge">---</code> und hat <code class="language-plaintext highlighter-rouge">layout: post</code>
+<strong>Häkchen:</strong> [ ]</p>
+
+<h4 id="test-42-keine-leeren-oder-malformed-posts">Test 4.2: Keine leeren oder malformed Posts</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">grep</span> <span class="nt">-c</span> <span class="s2">"layout: post"</span> _posts/<span class="k">*</span>.md | <span class="nb">grep</span> <span class="nt">-v</span> <span class="s2">":1$"</span> | <span class="nb">grep</span> <span class="nt">-v</span> <span class="s2">":5$"</span>
+</code></pre></div></div>
+<p><strong>Erwartet:</strong> ✓ Keine Ausgabe (alle Posts haben genau ein <code class="language-plaintext highlighter-rouge">layout: post</code>)
+<strong>Häkchen:</strong> [ ]</p>
+
+<hr />
+
+<h3 id="phase-5-dokumentation-5-min">Phase 5: Dokumentation (5 min)</h3>
+
+<h4 id="test-51-cleanupmd-ist-aktuell">Test 5.1: cleanup.md ist aktuell</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">grep</span> <span class="nt">-c</span> <span class="s2">"</span><span class="se">\[</span><span class="s2">x</span><span class="se">\]</span><span class="s2">"</span> docs/cleanup.md
+</code></pre></div></div>
+<p><strong>Erwartet:</strong> ✓ Mind. 7 Haken (durchgeführte Cleanups)
+<strong>Häkchen:</strong> [ ]</p>
+
+<h4 id="test-52-branching-ci-policymd-existiert">Test 5.2: branching-ci-policy.md existiert</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">test</span> <span class="nt">-f</span> docs/branching-ci-policy.md <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">"EXISTS"</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">"MISSING"</span>
+</code></pre></div></div>
+<p><strong>Erwartet:</strong> <code class="language-plaintext highlighter-rouge">EXISTS</code>
+<strong>Häkchen:</strong> [ ]</p>
+
+<h4 id="test-53-pr-template-existiert">Test 5.3: PR-Template existiert</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">test</span> <span class="nt">-f</span> .github/pull_request_template.md <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">"EXISTS"</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">"MISSING"</span>
+</code></pre></div></div>
+<p><strong>Erwartet:</strong> <code class="language-plaintext highlighter-rouge">EXISTS</code>
+<strong>Häkchen:</strong> [ ]</p>
+
+<hr />
+
+<h3 id="phase-6-git-status-5-min">Phase 6: Git Status (5 min)</h3>
+
+<h4 id="test-61-branch-ist-chorecode-cleanup">Test 6.1: Branch ist <code class="language-plaintext highlighter-rouge">chore/code-cleanup</code></h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch <span class="nt">--show-current</span>
+</code></pre></div></div>
+<p><strong>Erwartet:</strong> <code class="language-plaintext highlighter-rouge">chore/code-cleanup</code>
+<strong>Häkchen:</strong> [ ]</p>
+
+<h4 id="test-62-alle-änderungen-sind-committed">Test 6.2: Alle Änderungen sind committed</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status <span class="nt">--porcelain</span>
+</code></pre></div></div>
+<p><strong>Erwartet:</strong> ✓ Leer oder nur untracked files (die ignoriert sein sollten)
+<strong>Häkchen:</strong> [ ]</p>
+
+<h4 id="test-63-push-ist-erfolgreich">Test 6.3: Push ist erfolgreich</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log <span class="nt">-1</span> <span class="nt">--oneline</span>
+</code></pre></div></div>
+<p><strong>Erwartet:</strong> ✓ Zeigt deine letzten Commits
+<strong>Häkchen:</strong> [ ]</p>
+
+<hr />
+
+<h2 id="-final-gono-go">🎯 Final Go/No-Go</h2>
+
+<p><strong>ALLE Tests bestanden?</strong> → <strong>GO</strong> für PR</p>
+
+<p><strong>Tests fehlgeschlagen?</strong> → Welche?</p>
+<ul>
+  <li>Gib mir die Fehlermeldung aus dem fehlgeschlagenen Test</li>
+  <li>Ich werde es fixen</li>
+  <li>Wir testen erneut</li>
+</ul>
+
+<hr />
+
+<h2 id="-quick-befehl-alle-tests-auf-einmal">⚡ Quick-Befehl: Alle Tests auf einmal</h2>
+
+<p>Wenn du alles auf einmal prüfen willst:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /home/consti/AndroidStudioProjects/The-AI-Moment <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">echo</span> <span class="s2">"=== BUILD LOCAL ==="</span> <span class="o">&amp;&amp;</span> make build-local <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">echo</span> <span class="s2">"=== BUILD INTEGRATION ==="</span> <span class="o">&amp;&amp;</span> make build-integration <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">echo</span> <span class="s2">"=== BUILD PRODUCTION ==="</span> <span class="o">&amp;&amp;</span> make build-production <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">echo</span> <span class="s2">"=== SSH KEYS ==="</span> <span class="o">&amp;&amp;</span> git status | <span class="nb">grep</span> <span class="nt">-i</span> github <span class="o">||</span> <span class="nb">echo</span> <span class="s2">"OK: No SSH keys"</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">echo</span> <span class="s2">"=== LEGACY DEPLOY ==="</span> <span class="o">&amp;&amp;</span> <span class="nb">test</span> <span class="o">!</span> <span class="nt">-f</span> .github/workflows/deploy.yml <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">"OK: Deleted"</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">"ERROR: Still exists"</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">echo</span> <span class="s2">"=== BASEURL PROD ==="</span> <span class="o">&amp;&amp;</span> <span class="nb">grep</span> <span class="s2">"baseurl: </span><span class="se">\"</span><span class="s2">/The-AI-Moment</span><span class="se">\"</span><span class="s2">$"</span> _config.yml <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">"OK"</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">echo</span> <span class="s2">"=== BASEURL STAGING ==="</span> <span class="o">&amp;&amp;</span> <span class="nb">grep</span> <span class="s2">"baseurl: </span><span class="se">\"</span><span class="s2">/The-AI-Moment/staging</span><span class="se">\"</span><span class="s2">$"</span> _config_integration.yml <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">"OK"</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">echo</span> <span class="s2">"=== CLEANUP DOC ==="</span> <span class="o">&amp;&amp;</span> <span class="nb">grep</span> <span class="nt">-c</span> <span class="s2">"</span><span class="se">\[</span><span class="s2">x</span><span class="se">\]</span><span class="s2">"</span> docs/cleanup.md
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-nächste-schritte-nach-erfolgreichem-test">📝 Nächste Schritte nach erfolgreichem Test</h2>
+
+<ol>
+  <li>Sag mir: <strong>“Alle Tests bestanden ✅”</strong></li>
+  <li>Ich erstelle den PR: <code class="language-plaintext highlighter-rouge">chore/code-cleanup -&gt; integration</code></li>
+  <li>Du reviewst die Änderungen im Browser</li>
+  <li>Merge!</li>
+</ol>
+
+<hr />
+
+<p><strong>START MIT TEST 1.1</strong> → Sag mir Bescheid wenn Test 1.1 bestanden ist ✓</p>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h3>The AI Moment</h3>
+        <p>Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution.</p>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Explore</h4>
+        <ul>
+          
+            <li><a href="/The-AI-Moment/">Home</a></li>
+          
+            <li><a href="/The-AI-Moment/articles/">Articles</a></li>
+          
+            <li><a href="/The-AI-Moment/podcasts/">Podcasts</a></li>
+          
+            <li><a href="/The-AI-Moment/videos/">Videos</a></li>
+          
+            <li><a href="/The-AI-Moment/about/">About</a></li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-topics">
+        <h4>Topics</h4>
+        <ul>
+          <li>AI Technology</li>
+          <li>Economic Impact</li>
+          <li>Social Impact</li>
+          <li>AI Policy &amp; Ethics</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 The AI Moment. Content curated for educational purposes.
+        Built with <a href="https://jekyllrb.com" target="_blank" rel="noopener noreferrer">Jekyll</a>
+        and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+      </p>
+      <p class="rss-link">
+        <a href="/The-AI-Moment/feed.xml">RSS Feed</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="/The-AI-Moment/assets/js/main.js"></script>
+  </body>
+</html>
