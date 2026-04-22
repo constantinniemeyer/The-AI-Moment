@@ -9,10 +9,10 @@ Browse articles on AI technology, its economic impact, and social implications. 
 
 <div class="filter-bar">
   <button class="filter-btn active" onclick="filterPosts('all', this)">All</button>
-  <button class="filter-btn" onclick="filterPosts('technology', this)">Technology</button>
-  <button class="filter-btn" onclick="filterPosts('economics', this)">Economics</button>
-  <button class="filter-btn" onclick="filterPosts('society', this)">Society</button>
-  <button class="filter-btn" onclick="filterPosts('policy', this)">Policy</button>
+  <button class="filter-btn" id="filter-whiteboard-theory" onclick="filterPosts('whiteboard theory', this)">Whiteboard Theory</button>
+  <button class="filter-btn" id="filter-the-bottom-line" onclick="filterPosts('the bottom line', this)">The Bottom Line</button>
+  <button class="filter-btn" id="filter-the-social-ledger" onclick="filterPosts('the social ledger', this)">The Social Ledger</button>
+  <button class="filter-btn" id="filter-applied-intelligence" onclick="filterPosts('applied intelligence', this)">Applied Intelligence</button>
 </div>
 
 <ul class="article-list" id="article-list">
@@ -53,4 +53,14 @@ function filterPosts(category, btn) {
     }
   });
 }
+
+// Auto-filter based on URL hash (e.g. #whiteboard-theory → "whiteboard theory")
+(function() {
+  var hash = window.location.hash.replace('#', '');
+  if (hash) {
+    var category = hash.replace(/-/g, ' ');
+    var btn = document.getElementById('filter-' + hash);
+    if (btn) { filterPosts(category, btn); }
+  }
+})();
 </script>

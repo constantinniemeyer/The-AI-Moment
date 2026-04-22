@@ -13,10 +13,12 @@ We aim to make AI developments accessible and understandable to a wide audience 
 
 ## What We Cover
 
-- **AI Technology** — breakthrough research, new models, and capability evaluations
-- **Economic Impact** — productivity, labour markets, investment, and growth
-- **Social Impact** — education, healthcare, creativity, privacy, and wellbeing
-- **AI Policy** — regulation, governance, safety, and ethics
+- **Whiteboard Theory** — summaries of the latest skirmishes in AI research, industry, and regulation
+- **The Bottom Line** — analysis of how silicon is reshaping labour markets and business models
+- **The Social Ledger** — reporting on the algorithmic impact on schools, culture and society at large
+- **Applied Intelligence** — a pragmatic guide to putting AI to work, from DIY software development to the subtle art of the prompt
+- **Synthetic Talk** — AI-generated podcasts via Google NotebookLM, deep dives on key AI topics
+- **The Big Picture** — curated videos and interviews for a clearer view of the landscape
 
 ## How This Site Works
 
@@ -49,6 +51,7 @@ title: "Your Post Title"
 subtitle: "Optional subtitle"
 date: YYYY-MM-DD HH:MM:SS +0000
 categories: [Technology]    # Technology, Economics, Society, Policy, Meta
+# Section tags: whiteboard-theory, the-bottom-line, the-social-ledger, applied-intelligence, synthetic-talk, the-big-picture
 tags: [tag1, tag2]
 
 # Optional: link to original source

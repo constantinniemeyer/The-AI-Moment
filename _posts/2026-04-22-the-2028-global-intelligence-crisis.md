@@ -3,7 +3,7 @@ layout: post
 title: "The 2028 Global Intelligence Crisis"
 subtitle: "A Post-Mortem of the Future"
 date: 2026-04-22 00:00:00 +0000
-categories: [Economics]
+categories: [The Bottom Line]
 tags: [ai, labor, displacement, finance, debt, systemic-risk]
 podcast_id: "/audio/Warum_der_KI-Triumph_zum_Wirtschafts-Albtraum_wird.mp3"
 podcast_type: "audio"
@@ -27,3 +27,4 @@ It is a cautionary tale of what happens when a financial architecture built on t
 > **Why listen in?**
 >
 > For those who suspect that being "replaced by a script" is more than just an office joke, our in-depth podcast explores whether the professional class is sleepwalking into a Malthusian trap of its own making.
+

@@ -390,6 +390,10 @@ tr:nth-child(even) { background: var(--color-bg-card); }
   padding: 1.5rem 1.25rem;
   text-align: center;
   transition: all var(--transition);
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 .topic-card:hover {
   border-color: var(--color-accent);

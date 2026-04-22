@@ -3,7 +3,7 @@ layout: post
 title: "The Digital Heart: Modeling Functional Emotions in Claude 4.5"
 subtitle: "How emotion vectors shape AI decision-making — and what happens when you manipulate them"
 date: 2026-04-22 00:00:00 +0000
-categories: [Technology]
+categories: [Whiteboard Theory]
 tags: [ai, anthropic, claude, alignment, emotions, psychology, llm]
 podcast_id: "/audio/How_Mathematical_Panic_Drives_Claude_4.m4a"
 podcast_type: "audio"
@@ -32,5 +32,6 @@ The result is a machine that models human psychology with such precision that it
 
 
 {% include podcast-embed.html podcast_id=page.podcast_id_2 podcast_type=page.podcast_type_2 podcast_title="Emotionsvektoren steuern Claudes Verhalten (Deutsch)" %}
+
 
 

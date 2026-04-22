@@ -10,9 +10,12 @@ tags: [welcome, introduction]
 Humanity has reached a rare turning point. Artificial intelligence—once the preserve of academic labs and novelists—has finally entered the wild. In doing so, it is rewriting the rules of how we work, talk, and think.
 **The AI Moment** is a field guide to this transition. Here, we track the upheaval through:
 
-- **Intelligence**: Summaries of the latest skirmishes in research, industry, and regulation. 
+- **Whiteboard Theory**: Summaries of the latest skirmishes in research, industry, and regulation. 
 - **The Bottom Line**: Analysis of how silicon is reshaping labour markets and business models. 
-- **The Social Ledger**: Reporting on the algorithmic impact on schools, clinics, and the arts. 
+- **The Social Ledger**: Exploring the algorithmic impact on politics, culture and society at large. 
+- **Applied Intelligence**: A pragmatic guide to putting the AI boffins to work, from DIY software development to the subtle art of the prompt.
+
+Throughout the posts, we use AI generated material, because what better way to understand the technology than by experiencing it firsthand? Expect:
 - **Synthetic Talk**: Podcasts via Google’s NotebookLM—AI-generated debates on the technology’s trajectory. 
 - **The Big Picture**: Curated videos and interviews for a clearer view of the landscape.
 
