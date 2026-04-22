@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://constantinniemeyer.github.io/The-AI-Moment/feed.xml" rel="self" type="application/atom+xml" /><link href="https://constantinniemeyer.github.io/The-AI-Moment/" rel="alternate" type="text/html" /><updated>2026-04-22T09:06:32+00:00</updated><id>https://constantinniemeyer.github.io/The-AI-Moment/feed.xml</id><title type="html">The AI Moment</title><subtitle>Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution.</subtitle><author><name>The AI Moment</name></author><entry><title type="html">AI Governance and Policy: The Global Race to Regulate Artificial Intelligence</title><link href="https://constantinniemeyer.github.io/The-AI-Moment/policy/2025/04/10/ai-governance-and-policy/" rel="alternate" type="text/html" title="AI Governance and Policy: The Global Race to Regulate Artificial Intelligence" /><published>2025-04-10T00:00:00+00:00</published><updated>2025-04-10T00:00:00+00:00</updated><id>https://constantinniemeyer.github.io/The-AI-Moment/policy/2025/04/10/ai-governance-and-policy</id><content type="html" xml:base="https://constantinniemeyer.github.io/The-AI-Moment/policy/2025/04/10/ai-governance-and-policy/"><![CDATA[<p>Artificial intelligence governance has become one of the most contested areas of technology policy. Governments across the world are racing to establish rules for AI development and deployment — navigating between the desire to capture AI’s economic benefits and the imperative to manage its risks.</p>
+
+<h2 id="the-eu-ai-act">The EU AI Act</h2>
+
+<p>The European Union’s AI Act, which entered into force in 2024, is the world’s most comprehensive AI regulation to date. It takes a <strong>risk-based approach</strong>:</p>
+
+<ul>
+  <li><strong>Unacceptable risk</strong> (banned): AI systems that manipulate people subconsciously, use real-time biometric surveillance in public, enable social scoring by governments</li>
+  <li><strong>High risk</strong> (strictly regulated): AI in critical infrastructure, medical devices, law enforcement, education assessment, credit scoring, border control</li>
+  <li><strong>Limited risk</strong>: Transparency obligations — chatbots must disclose they are AI; deepfakes must be labelled</li>
+  <li><strong>Minimal risk</strong>: No regulation — spam filters, game-playing AI, etc.</li>
+</ul>
+
+<p>Frontier AI models (those trained above a compute threshold) face additional obligations around capability testing, transparency, and safety.</p>
+
+<h2 id="the-united-states-approach">The United States Approach</h2>
+
+<p>The US has taken a lighter-touch, sectoral approach. A 2023 Executive Order on AI directed federal agencies to develop AI safety standards, required developers of powerful AI to share safety test results with the government, and established AI safety institutes within NIST and the Department of Homeland Security.</p>
+
+<p>US policy has been characterised by:</p>
+<ul>
+  <li>Emphasis on maintaining competitive advantage over China</li>
+  <li>Reliance on voluntary commitments from leading AI companies</li>
+  <li>Sector-specific rules (FDA for medical AI, financial regulators for fintech AI)</li>
+  <li>Debate between Congress and the administration over the need for comprehensive legislation</li>
+</ul>
+
+<h2 id="chinas-approach">China’s Approach</h2>
+
+<p>China has moved quickly to regulate specific AI applications while supporting domestic AI development as a strategic priority. Rules covering:</p>
+<ul>
+  <li>Algorithmic recommendation systems (2022)</li>
+  <li>Deepfakes and synthetic media (2022)</li>
+  <li>Generative AI services (2023)</li>
+</ul>
+
+<p>China’s approach requires AI systems to embody “core socialist values” and restricts content that threatens national unity — reflecting a governance model that prioritises social stability alongside safety.</p>
+
+<h2 id="global-coordination">Global Coordination</h2>
+
+<p>Multilateral efforts at AI governance are nascent but growing:</p>
+<ul>
+  <li>The <strong>OECD AI Principles</strong> (2019) established broad normative commitments adopted by 46 countries</li>
+  <li>The <strong>Bletchley Declaration</strong> (2023) — signed at the UK’s AI Safety Summit — established consensus that frontier AI poses potentially catastrophic risks requiring international cooperation</li>
+  <li>The <strong>UN</strong> has established an AI advisory body and is exploring treaty options</li>
+  <li>The <strong>G7 Hiroshima AI Process</strong> produced a set of voluntary guiding principles for advanced AI</li>
+</ul>
+
+<h2 id="the-core-tensions">The Core Tensions</h2>
+
+<p>AI governance involves genuine tensions that resist easy resolution:</p>
+
+<p><strong>Innovation vs. Safety</strong>: Regulation imposes compliance costs and slows deployment. The EU AI Act’s supporters argue it will build the trust necessary for sustainable adoption; critics argue it will disadvantage European AI companies.</p>
+
+<p><strong>National Competition vs. Global Coordination</strong>: Effective governance of frontier AI requires international cooperation, but AI leadership is also a strategic geopolitical asset that nations are reluctant to constrain.</p>
+
+<p><strong>Precaution vs. Evidence</strong>: Some risks (existential from superintelligent AI) are speculative but potentially catastrophic; others (current harms from biased systems) are documented but contested in severity. Different stakeholders weight these differently.</p>
+
+<p><strong>Transparency vs. Intellectual Property</strong>: Meaningful safety oversight requires insight into how systems work; AI developers argue their architectures and training data are proprietary.</p>
+
+<h2 id="what-to-watch">What to Watch</h2>
+
+<p>The next phase of AI governance will be shaped by:</p>
+<ul>
+  <li>Whether the EU AI Act’s enforcement proves effective</li>
+  <li>Whether US Congress passes comprehensive AI legislation</li>
+  <li>How AI liability law develops (who is responsible when AI causes harm?)</li>
+  <li>The outcome of the global discussion about AI safety standards for frontier models</li>
+</ul>
+
+<p>AI governance is not a technical problem with a technical solution. It is fundamentally a political question about who gets to benefit from AI, who bears its risks, and who has the authority to decide.</p>]]></content><author><name>The AI Moment</name></author><category term="Policy" /><category term="regulation" /><category term="EU AI Act" /><category term="governance" /><category term="safety" /><category term="ethics" /><summary type="html"><![CDATA[Artificial intelligence governance has become one of the most contested areas of technology policy. Governments across the world are racing to establish rules for AI development and deployment — navigating between the desire to capture AI’s economic benefits and the imperative to manage its risks.]]></summary></entry><entry><title type="html">The Rise of Large Language Models: GPT, Gemini, Claude and the New AI Landscape</title><link href="https://constantinniemeyer.github.io/The-AI-Moment/technology/2025/04/01/rise-of-large-language-models/" rel="alternate" type="text/html" title="The Rise of Large Language Models: GPT, Gemini, Claude and the New AI Landscape" /><published>2025-04-01T00:00:00+00:00</published><updated>2025-04-01T00:00:00+00:00</updated><id>https://constantinniemeyer.github.io/The-AI-Moment/technology/2025/04/01/rise-of-large-language-models</id><content type="html" xml:base="https://constantinniemeyer.github.io/The-AI-Moment/technology/2025/04/01/rise-of-large-language-models/"><![CDATA[<p>In 2017, a paper from Google Research titled <em>Attention Is All You Need</em> introduced the Transformer architecture — a neural network design that would quietly set the stage for the most dramatic acceleration in AI capability in history. By 2022, that architecture had scaled into systems capable of writing, reasoning, coding, and conversing at a level indistinguishable from human output in many domains.</p>
+
+<h2 id="what-is-a-large-language-model">What Is a Large Language Model?</h2>
+
+<p>A large language model (LLM) is a neural network trained on vast quantities of text — essentially, a large portion of human-written knowledge — to predict what word or token comes next in a sequence. From this simple training objective, surprisingly sophisticated capabilities emerge: summarisation, translation, question answering, coding, creative writing, and mathematical reasoning.</p>
+
+<p>The word <em>large</em> refers to the number of parameters in the model — the adjustable weights that encode learned associations. Modern frontier models have hundreds of billions of parameters, trained on clusters of thousands of specialised AI chips over months.</p>
+
+<h2 id="the-key-players">The Key Players</h2>
+
+<h3 id="openai--gpt-series">OpenAI / GPT Series</h3>
+<p>OpenAI’s GPT series set off the current wave. GPT-3 (2020) demonstrated startling language fluency. ChatGPT (November 2022) brought it to a mass audience — reaching 100 million users faster than any previous application. GPT-4 (2023) added multimodal capability (understanding images) and substantially improved reasoning.</p>
+
+<h3 id="google--gemini">Google / Gemini</h3>
+<p>Google responded with Gemini — a family of multimodal models designed from the ground up to handle text, images, audio, and video. Gemini Ultra demonstrated performance exceeding GPT-4 on many benchmarks. Google’s integration of Gemini into Search, Workspace, and Android gives it massive distribution.</p>
+
+<h3 id="anthropic--claude">Anthropic / Claude</h3>
+<p>Anthropic, founded by former OpenAI researchers, has focused on AI safety. Their Claude series uses <em>Constitutional AI</em> — a technique for aligning model behaviour with values through self-critique — to produce models that are notably careful, honest, and resistant to manipulation. Claude has become a leading choice for enterprise applications.</p>
+
+<h3 id="meta--llama">Meta / LLaMA</h3>
+<p>Meta has taken an open-source approach, releasing the LLaMA series of models freely for research and commercial use. This has spawned a rich ecosystem of fine-tuned variants and driven democratisation of LLM capability.</p>
+
+<h2 id="capabilities-and-limitations">Capabilities and Limitations</h2>
+
+<p>Current frontier LLMs are genuinely impressive at:</p>
+<ul>
+  <li>Text summarisation, writing, and editing</li>
+  <li>Code generation and debugging</li>
+  <li>Question answering over documents</li>
+  <li>Step-by-step reasoning on logic and mathematics</li>
+  <li>Multilingual translation and comprehension</li>
+</ul>
+
+<p>They remain unreliable at:</p>
+<ul>
+  <li>Factual accuracy (they “hallucinate” confident-sounding falsehoods)</li>
+  <li>Reliable multi-step mathematical reasoning</li>
+  <li>Tasks requiring up-to-date real-world information without retrieval tools</li>
+  <li>Consistent behaviour in novel or adversarial situations</li>
+</ul>
+
+<h2 id="what-comes-next">What Comes Next?</h2>
+
+<p>The frontier is moving rapidly. Key directions include:</p>
+<ul>
+  <li><strong>Multimodality</strong>: models that natively understand and generate text, images, audio, and video</li>
+  <li><strong>Agentic systems</strong>: LLMs that take actions, use tools, browse the web, and run code</li>
+  <li><strong>Longer context windows</strong>: enabling processing of entire books, codebases, or conversation histories</li>
+  <li><strong>Efficiency</strong>: smaller models approaching frontier capability, enabling on-device AI</li>
+</ul>
+
+<p>Whether this trajectory leads to systems of human-level general intelligence — and when — remains genuinely contested among researchers. What is clear is that LLMs have already fundamentally changed the landscape of knowledge work.</p>]]></content><author><name>The AI Moment</name></author><category term="Technology" /><category term="LLMs" /><category term="GPT" /><category term="Gemini" /><category term="Claude" /><category term="foundation models" /><category term="AI research" /><summary type="html"><![CDATA[In 2017, a paper from Google Research titled Attention Is All You Need introduced the Transformer architecture — a neural network design that would quietly set the stage for the most dramatic acceleration in AI capability in history. By 2022, that architecture had scaled into systems capable of writing, reasoning, coding, and conversing at a level indistinguishable from human output in many domains.]]></summary></entry><entry><title type="html">AI and Society: How Artificial Intelligence Is Reshaping Everyday Life</title><link href="https://constantinniemeyer.github.io/The-AI-Moment/society/2025/03/10/ai-and-society/" rel="alternate" type="text/html" title="AI and Society: How Artificial Intelligence Is Reshaping Everyday Life" /><published>2025-03-10T00:00:00+00:00</published><updated>2025-03-10T00:00:00+00:00</updated><id>https://constantinniemeyer.github.io/The-AI-Moment/society/2025/03/10/ai-and-society</id><content type="html" xml:base="https://constantinniemeyer.github.io/The-AI-Moment/society/2025/03/10/ai-and-society/"><![CDATA[<p>The transformative effects of artificial intelligence extend far beyond the economy. AI is now embedded in healthcare decisions, educational experiences, creative work, and personal relationships — raising questions that are as much philosophical as practical.</p>
+
+<h2 id="education">Education</h2>
+
+<p>AI tutoring systems are delivering genuinely personalised learning at scale for the first time. Tools like Khan Academy’s Khanmigo (built on GPT-4) can adapt explanations to individual students, answer questions in real time, and provide feedback that previously required a one-to-one teacher.</p>
+
+<p>Yet concerns abound. The proliferation of AI writing tools has upended academic integrity, forcing universities to rethink assessment. There is evidence that students who rely heavily on AI for writing and problem-solving may not develop the underlying skills those tasks were designed to build. And access to high-quality AI tutoring remains uneven — available primarily to those in connected, high-income settings.</p>
+
+<h2 id="healthcare">Healthcare</h2>
+
+<p>AI’s potential in medicine is striking:</p>
+
+<ul>
+  <li><strong>Diagnostic imaging</strong>: AI models can detect diabetic retinopathy, certain cancers, and cardiac anomalies from scans with accuracy matching or exceeding human specialists</li>
+  <li><strong>Drug discovery</strong>: AlphaFold’s protein structure predictions have accelerated research across biology; AI is now central to major pharmaceutical discovery pipelines</li>
+  <li><strong>Clinical decision support</strong>: AI tools can flag drug interactions, remind clinicians of evidence-based protocols, and triage emergency presentations</li>
+</ul>
+
+<p>The risks are commensurate with the stakes. AI systems trained on historical data can encode and amplify existing biases — performing worse for Black patients in dermatology or chest X-ray models, for example. Regulatory frameworks for medical AI are still catching up.</p>
+
+<h2 id="creativity-and-culture">Creativity and Culture</h2>
+
+<p>Generative AI has triggered a heated debate about authorship, originality, and the value of human creativity. The tools are impressive: systems like DALL-E, Midjourney, and Sora can generate images and video from text prompts; Claude, GPT-4, and Gemini can write compellingly in many styles and genres.</p>
+
+<p>For many working artists, writers, and musicians, the concern is existential: their work was used to train these systems without consent, and the outputs compete directly with their livelihoods. Legal battles over copyright and training data are ongoing in courts across the US and EU.</p>
+
+<p>For others, generative AI is a powerful creative partner — accelerating idea generation, enabling new art forms, and removing technical barriers to creative expression.</p>
+
+<h2 id="relationships-and-wellbeing">Relationships and Wellbeing</h2>
+
+<p>The emergence of AI companions — chatbots designed for emotional connection — raises some of the most uncomfortable questions. Millions of people now report meaningful relationships with AI systems. The psychological effects are unclear: there is evidence that AI companions reduce loneliness for some users, particularly elderly and socially isolated people, but also concerns about dependency and the substitution of AI connection for human relationships.</p>
+
+<h2 id="privacy-and-surveillance">Privacy and Surveillance</h2>
+
+<p>AI has dramatically expanded the capability and scale of surveillance. Facial recognition systems are now deployed by law enforcement agencies globally. Predictive policing algorithms remain in use despite well-documented evidence of racial bias. Employers use AI to monitor remote workers. Advertisers use AI to infer psychological profiles and target political messaging.</p>
+
+<p>The governance gap — between AI capability and the regulations needed to constrain its use — is widest here. Most democracies lack comprehensive AI surveillance laws.</p>
+
+<h2 id="the-challenge-ahead">The Challenge Ahead</h2>
+
+<p>The social impact of AI is not a distant prospect. It is unfolding now, in classrooms, hospitals, newsrooms, and homes. Managing it well will require deliberate choices by policymakers, technologists, and citizens — choices about what AI should be allowed to do, who gets to benefit, and what human activities should remain beyond its reach.</p>]]></content><author><name>The AI Moment</name></author><category term="Society" /><category term="education" /><category term="healthcare" /><category term="creativity" /><category term="social change" /><category term="ethics" /><summary type="html"><![CDATA[The transformative effects of artificial intelligence extend far beyond the economy. AI is now embedded in healthcare decisions, educational experiences, creative work, and personal relationships — raising questions that are as much philosophical as practical.]]></summary></entry><entry><title type="html">The Economic Impact of AI: What the Research Says</title><link href="https://constantinniemeyer.github.io/The-AI-Moment/economics/2025/02/15/economic-impact-of-ai/" rel="alternate" type="text/html" title="The Economic Impact of AI: What the Research Says" /><published>2025-02-15T00:00:00+00:00</published><updated>2025-02-15T00:00:00+00:00</updated><id>https://constantinniemeyer.github.io/The-AI-Moment/economics/2025/02/15/economic-impact-of-ai</id><content type="html" xml:base="https://constantinniemeyer.github.io/The-AI-Moment/economics/2025/02/15/economic-impact-of-ai/"><![CDATA[<p>Artificial intelligence has moved from a speculative technology to a measurable economic force. A growing body of research is beginning to quantify its effects — on productivity, employment, wages, and GDP growth. The picture that emerges is both promising and uncertain.</p>
+
+<h2 id="the-productivity-argument">The Productivity Argument</h2>
+
+<p>A landmark 2023 study by Erik Brynjolfsson, Danielle Li, and Lindsey Raymond found that customer service agents using a generative AI assistant showed productivity gains of <strong>14 percent on average</strong>, with the largest gains among less experienced workers. The AI effectively transmitted the knowledge of top performers to their colleagues.</p>
+
+<p>A similar pattern appeared in a study of GitHub Copilot, where software developers using AI code assistance completed tasks <strong>55 percent faster</strong> than those who did not.</p>
+
+<p>These early studies suggest that AI acts as a <em>general-purpose technology</em> — like electricity or the internet — whose productivity benefits diffuse broadly through the economy over time.</p>
+
+<h2 id="labour-market-effects">Labour Market Effects</h2>
+
+<p>The labour market questions are more contested. Economists disagree sharply on the scale and speed of disruption:</p>
+
+<p><strong>The optimistic view</strong> holds that AI will augment workers rather than replace them, raising wages by boosting productivity and creating new categories of work — just as previous waves of automation ultimately increased employment.</p>
+
+<p><strong>The pessimistic view</strong> — articulated most forcefully by Daron Acemoglu — argues that the current wave of AI is biased towards <em>automation</em> rather than <em>augmentation</em>: it targets cognitive tasks performed by educated workers in ways that may not create comparable new roles. Acemoglu’s 2024 paper estimates that AI could raise GDP by only <strong>0.5–1 percent</strong> over the next decade — far below some of the more bullish forecasts.</p>
+
+<p><strong>The IMF’s analysis</strong> (January 2024) found that AI could affect <strong>40 percent of jobs globally</strong>, and as many as <strong>60 percent</strong> in advanced economies — with roughly half of those being positively affected (augmented) and half negatively affected (at risk of displacement).</p>
+
+<h2 id="the-inequality-question">The Inequality Question</h2>
+
+<p>Perhaps more important than the aggregate employment number is the distributional question. Research consistently finds that AI’s benefits and disruptions are not evenly spread:</p>
+
+<ul>
+  <li>Workers with <strong>less experience</strong> benefit most from AI coding and writing assistance (the tool closes the gap with senior colleagues)</li>
+  <li>Workers in <strong>higher-income countries</strong> face more exposure to AI disruption than those in lower-income countries, where routine physical work remains dominant</li>
+  <li><strong>Higher-skill knowledge workers</strong> face more exposure than is typical of prior automation waves, which primarily affected routine manual and cognitive tasks</li>
+</ul>
+
+<h2 id="what-gdp-forecasters-say">What GDP Forecasters Say</h2>
+
+<p>Forecasts for AI’s macroeconomic impact vary enormously:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Source</th>
+      <th>Projected GDP Impact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Goldman Sachs (2023)</td>
+      <td>+7% global GDP over 10 years</td>
+    </tr>
+    <tr>
+      <td>McKinsey (2023)</td>
+      <td>$2.6–4.4 trillion annually</td>
+    </tr>
+    <tr>
+      <td>Acemoglu (2024)</td>
+      <td>+0.5–1% over 10 years</td>
+    </tr>
+    <tr>
+      <td>PwC (2023)</td>
+      <td>$15.7 trillion by 2030</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The wide range reflects genuine uncertainty about adoption speed, regulatory constraints, and whether AI will ultimately behave more like a tool that augments workers or a system that replaces them.</p>
+
+<h2 id="the-bottom-line">The Bottom Line</h2>
+
+<p>The economic evidence so far supports cautious optimism about AI’s productivity benefits — particularly for tasks involving writing, coding, and information synthesis. But the distribution of those gains, and the pace of labour market adjustment, remain deeply uncertain. The transition may be uneven in ways that require active policy responses around education, retraining, and social insurance.</p>
+
+<blockquote>
+  <p><em>“The question is not whether AI will change the economy, but how fast, for whom, and whether our institutions will adapt in time.”</em></p>
+</blockquote>]]></content><author><name>The AI Moment</name></author><category term="Economics" /><category term="labour" /><category term="productivity" /><category term="automation" /><category term="wages" /><category term="growth" /><summary type="html"><![CDATA[Artificial intelligence has moved from a speculative technology to a measurable economic force. A growing body of research is beginning to quantify its effects — on productivity, employment, wages, and GDP growth. The picture that emerges is both promising and uncertain.]]></summary></entry><entry><title type="html">Welcome to The AI Moment</title><link href="https://constantinniemeyer.github.io/The-AI-Moment/meta/2025/01/01/welcome-to-the-ai-moment/" rel="alternate" type="text/html" title="Welcome to The AI Moment" /><published>2025-01-01T00:00:00+00:00</published><updated>2025-01-01T00:00:00+00:00</updated><id>https://constantinniemeyer.github.io/The-AI-Moment/meta/2025/01/01/welcome-to-the-ai-moment</id><content type="html" xml:base="https://constantinniemeyer.github.io/The-AI-Moment/meta/2025/01/01/welcome-to-the-ai-moment/"><![CDATA[<p>We are living through an extraordinary moment in history. Artificial intelligence — once confined to research labs and science fiction — has crossed a threshold and entered everyday life, reshaping how we work, communicate, create, and think.</p>
+
+<p><strong>The AI Moment</strong> is a curated resource for tracking this transformation. Here you will find:</p>
+
+<ul>
+  <li><strong>Articles</strong> referencing and summarising key developments in AI research, industry, and policy</li>
+  <li><strong>Economic analysis</strong> of how AI is changing labour markets, productivity, and business models</li>
+  <li><strong>Social impact</strong> reporting on AI’s effects on education, healthcare, creativity, and society</li>
+  <li><strong>Podcasts</strong> generated with Google NotebookLM — AI-synthesised conversations on important AI topics</li>
+  <li><strong>Videos</strong> — curated explainers, interviews, and documentaries</li>
+</ul>
+
+<h2 id="why-now">Why Now?</h2>
+
+<p>The pace of AI development has accelerated dramatically. Since 2022, large language models have moved from laboratory curiosities to tools used by hundreds of millions of people. Generative AI is now embedded in search engines, productivity software, creative tools, and coding environments.</p>
+
+<p>This is not a distant future. It is happening now, and its implications — economic, social, political, and philosophical — are still being worked out.</p>
+
+<h2 id="how-to-use-this-site">How to Use This Site</h2>
+
+<p>Browse the <a href="/articles/">Articles</a> page for written coverage, categorised by topic. Head to <a href="/podcasts/">Podcasts</a> for AI-generated audio discussions created with Google NotebookLM, and <a href="/videos/">Videos</a> for visual content.</p>
+
+<p>Each post links to original sources so you can explore further.</p>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>This site is open-source and hosted on GitHub Pages. If you’d like to suggest an article, report a broken link, or contribute a post, please open an issue or pull request on <a href="https://github.com/constantinniemeyer/The-AI-Moment-">GitHub</a>.</p>]]></content><author><name>The AI Moment</name></author><category term="Meta" /><category term="welcome" /><category term="introduction" /><summary type="html"><![CDATA[We are living through an extraordinary moment in history. Artificial intelligence — once confined to research labs and science fiction — has crossed a threshold and entered everyday life, reshaping how we work, communicate, create, and think.]]></summary></entry></feed>
