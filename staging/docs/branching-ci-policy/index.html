@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Branching and CI Policy | The AI Moment (Integration)</title>
+<meta name="description" content="Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution.">
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Branching and CI Policy">
+<meta property="og:description" content="Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution.">
+<meta property="og:url" content="https://constantinniemeyer.github.io/staging/docs/branching-ci-policy/">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://constantinniemeyer.github.io/staging/docs/branching-ci-policy/">
+
+<!-- Styles -->
+<link rel="stylesheet" href="/staging/assets/css/main.css">
+
+<!-- RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title="The AI Moment (Integration)" href="/staging/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Branching and CI Policy | The AI Moment (Integration)</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Branching and CI Policy" />
+<meta name="author" content="The AI Moment" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution." />
+<meta property="og:description" content="Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution." />
+<link rel="canonical" href="https://constantinniemeyer.github.io/staging/docs/branching-ci-policy/" />
+<meta property="og:url" content="https://constantinniemeyer.github.io/staging/docs/branching-ci-policy/" />
+<meta property="og:site_name" content="The AI Moment (Integration)" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Branching and CI Policy" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"The AI Moment"},"description":"Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution.","headline":"Branching and CI Policy","url":"https://constantinniemeyer.github.io/staging/docs/branching-ci-policy/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="container">
+    <div class="site-header-inner">
+      <a href="/staging/" class="site-logo">
+        <span class="site-logo-icon">⚡</span>
+        <span class="site-logo-text">The AI Moment (Integration)</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
+        <ul class="nav-list">
+          
+            <li class="nav-item ">
+              <a href="/staging/" class="nav-link">Home</a>
+            </li>
+          
+            <li class="nav-item ">
+              <a href="/staging/articles/" class="nav-link">Articles</a>
+            </li>
+          
+            <li class="nav-item ">
+              <a href="/staging/podcasts/" class="nav-link">Podcasts</a>
+            </li>
+          
+            <li class="nav-item ">
+              <a href="/staging/videos/" class="nav-link">Videos</a>
+            </li>
+          
+            <li class="nav-item ">
+              <a href="/staging/about/" class="nav-link">About</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <main class="main-content">
+      <div class="container">
+        <div class="page">
+  <header class="page-header">
+    <h1 class="page-title">Branching and CI Policy</h1>
+    
+  </header>
+
+  <div class="page-content">
+    <h1 id="branching-and-ci-policy">Branching and CI Policy</h1>
+
+<p>This repository uses a staged delivery flow:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">feature/*</code>, <code class="language-plaintext highlighter-rouge">bugfix/*</code>, <code class="language-plaintext highlighter-rouge">chore/*</code>, <code class="language-plaintext highlighter-rouge">hotfix/*</code> -&gt; <code class="language-plaintext highlighter-rouge">integration</code></li>
+  <li><code class="language-plaintext highlighter-rouge">integration</code> -&gt; <code class="language-plaintext highlighter-rouge">main</code></li>
+  <li><code class="language-plaintext highlighter-rouge">main</code> deploys production</li>
+</ol>
+
+<h2 id="branch-rules">Branch Rules</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">integration</code>
+    <ul>
+      <li>Accepts PRs only from:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">feature/*</code></li>
+          <li><code class="language-plaintext highlighter-rouge">bugfix/*</code></li>
+          <li><code class="language-plaintext highlighter-rouge">chore/*</code></li>
+          <li><code class="language-plaintext highlighter-rouge">hotfix/*</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">main</code>
+    <ul>
+      <li>Accepts PRs only from:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">integration</code></li>
+          <li><code class="language-plaintext highlighter-rouge">hotfix/*</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>These rules are validated by <code class="language-plaintext highlighter-rouge">.github/workflows/ci.yml</code>.</p>
+
+<h2 id="merge-rules">Merge Rules</h2>
+
+<ul>
+  <li>No direct pushes to <code class="language-plaintext highlighter-rouge">integration</code> or <code class="language-plaintext highlighter-rouge">main</code></li>
+  <li>PR required for all merges</li>
+  <li>Required status checks:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Validate Branching Rules</code></li>
+      <li><code class="language-plaintext highlighter-rouge">Build Site</code></li>
+    </ul>
+  </li>
+  <li>At least 1 approving review for <code class="language-plaintext highlighter-rouge">integration</code></li>
+  <li>At least 1-2 approving reviews for <code class="language-plaintext highlighter-rouge">main</code> (team decision)</li>
+  <li>Resolve all conversations before merge</li>
+  <li>Recommended merge strategy: <strong>Squash merge</strong></li>
+</ul>
+
+<h2 id="deployment-rules">Deployment Rules</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">integration-deploy.yml</code>
+    <ul>
+      <li>Runs on push to <code class="language-plaintext highlighter-rouge">integration</code> and <code class="language-plaintext highlighter-rouge">main</code></li>
+      <li>Deploys staging site to <code class="language-plaintext highlighter-rouge">gh-pages/staging</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">production-deploy.yml</code>
+    <ul>
+      <li>Runs on push to <code class="language-plaintext highlighter-rouge">main</code></li>
+      <li>Deploys production site to <code class="language-plaintext highlighter-rouge">gh-pages</code> root</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="github-settings-checklist">GitHub Settings Checklist</h2>
+
+<p>Configure branch protection or rulesets for <code class="language-plaintext highlighter-rouge">integration</code> and <code class="language-plaintext highlighter-rouge">main</code>:</p>
+
+<ul>
+  <li>Require a pull request before merging</li>
+  <li>Require approvals</li>
+  <li>Require status checks to pass</li>
+  <li>Require conversation resolution</li>
+  <li>Restrict who can push (or fully block direct pushes)</li>
+  <li>Optional: require linear history</li>
+</ul>
+
+<h2 id="emergency-hotfix-path">Emergency Hotfix Path</h2>
+
+<ul>
+  <li>Branch from <code class="language-plaintext highlighter-rouge">main</code> as <code class="language-plaintext highlighter-rouge">hotfix/&lt;name&gt;</code></li>
+  <li>Open PR to <code class="language-plaintext highlighter-rouge">main</code></li>
+  <li>After merge to <code class="language-plaintext highlighter-rouge">main</code>, back-merge to <code class="language-plaintext highlighter-rouge">integration</code></li>
+</ul>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h3>The AI Moment (Integration)</h3>
+        <p>Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution.</p>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Explore</h4>
+        <ul>
+          
+            <li><a href="/staging/">Home</a></li>
+          
+            <li><a href="/staging/articles/">Articles</a></li>
+          
+            <li><a href="/staging/podcasts/">Podcasts</a></li>
+          
+            <li><a href="/staging/videos/">Videos</a></li>
+          
+            <li><a href="/staging/about/">About</a></li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-topics">
+        <h4>Topics</h4>
+        <ul>
+          <li>AI Technology</li>
+          <li>Economic Impact</li>
+          <li>Social Impact</li>
+          <li>AI Policy &amp; Ethics</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 The AI Moment (Integration). Content curated for educational purposes.
+        Built with <a href="https://jekyllrb.com" target="_blank" rel="noopener noreferrer">Jekyll</a>
+        and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+      </p>
+      <p class="rss-link">
+        <a href="/staging/feed.xml">RSS Feed</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="/staging/assets/js/main.js"></script>
+  </body>
+</html>
