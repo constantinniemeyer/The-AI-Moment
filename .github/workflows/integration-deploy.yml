@@ -1,0 +1,48 @@
+name: Integration Deploy
+
+on:
+  push:
+    branches:
+      - integration
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: integration-deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy Staging
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: integration
+    if: startsWith(github.ref, 'refs/heads/')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Build integration site
+        run: |
+          bundle exec jekyll build \
+            --config _config.yml,_config_integration.yml \
+            --destination _site_staging
+
+      - name: Deploy integration site to gh-pages/staging
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./_site_staging
+          destination_dir: staging
+          keep_files: true

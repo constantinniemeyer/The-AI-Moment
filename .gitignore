@@ -1,11 +1,15 @@
 # Jekyll build output
 _site/
+_site_local/
+_site_local_test/
+_site_staging/
+_site_prod/
 .jekyll-cache/
 .jekyll-metadata
 
 # Ruby bundler
 .bundle/
-vendor/
+vendor/bundle/
 
 # OS
 .DS_Store

@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    branches:
+      - integration
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  validate-branching:
+    name: Validate Branching Rules
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check PR branch policy
+        env:
+          BASE_REF: ${{ github.base_ref }}
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          echo "Validating PR: ${HEAD_REF} -> ${BASE_REF}"
+
+          case "${BASE_REF}" in
+            integration)
+              if [[ "${HEAD_REF}" =~ ^(feature|bugfix|chore|hotfix)/.+$ ]]; then
+                echo "OK: ${HEAD_REF} may merge into integration"
+              else
+                echo "ERROR: Only feature/*, bugfix/*, chore/*, hotfix/* may merge into integration"
+                exit 1
+              fi
+              ;;
+            main)
+              if [[ "${HEAD_REF}" == "integration" || "${HEAD_REF}" =~ ^hotfix/.+$ ]]; then
+                echo "OK: ${HEAD_REF} may merge into main"
+              else
+                echo "ERROR: Only integration or hotfix/* may merge into main"
+                exit 1
+              fi
+              ;;
+            *)
+              echo "ERROR: Unsupported base branch '${BASE_REF}'"
+              exit 1
+              ;;
+          esac
+
+  jekyll-build:
+    name: Build Site
+    needs: validate-branching
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Build site
+        run: bundle exec jekyll build --config _config.yml
