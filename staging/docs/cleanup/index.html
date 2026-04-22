@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cleanup &amp; Maintenance Checklist | The AI Moment (Integration)</title>
+<meta name="description" content="Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution.">
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cleanup &amp; Maintenance Checklist">
+<meta property="og:description" content="Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution.">
+<meta property="og:url" content="https://constantinniemeyer.github.io/The-AI-Moment/staging/docs/cleanup/">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://constantinniemeyer.github.io/The-AI-Moment/staging/docs/cleanup/">
+
+<!-- Styles -->
+<link rel="stylesheet" href="/The-AI-Moment/staging/assets/css/main.css">
+
+<!-- RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title="The AI Moment (Integration)" href="/The-AI-Moment/staging/feed.xml">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Cleanup &amp; Maintenance Checklist | The AI Moment (Integration)</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Cleanup &amp; Maintenance Checklist" />
+<meta name="author" content="The AI Moment" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution." />
+<meta property="og:description" content="Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution." />
+<link rel="canonical" href="https://constantinniemeyer.github.io/The-AI-Moment/staging/docs/cleanup/" />
+<meta property="og:url" content="https://constantinniemeyer.github.io/The-AI-Moment/staging/docs/cleanup/" />
+<meta property="og:site_name" content="The AI Moment (Integration)" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Cleanup &amp; Maintenance Checklist" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"The AI Moment"},"description":"Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution.","headline":"Cleanup &amp; Maintenance Checklist","url":"https://constantinniemeyer.github.io/The-AI-Moment/staging/docs/cleanup/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="container">
+    <div class="site-header-inner">
+      <a href="/The-AI-Moment/staging/" class="site-logo">
+        <span class="site-logo-icon">⚡</span>
+        <span class="site-logo-text">The AI Moment (Integration)</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
+        <ul class="nav-list">
+          
+            <li class="nav-item ">
+              <a href="/The-AI-Moment/staging/" class="nav-link">Home</a>
+            </li>
+          
+            <li class="nav-item ">
+              <a href="/The-AI-Moment/staging/articles/" class="nav-link">Articles</a>
+            </li>
+          
+            <li class="nav-item ">
+              <a href="/The-AI-Moment/staging/podcasts/" class="nav-link">Podcasts</a>
+            </li>
+          
+            <li class="nav-item ">
+              <a href="/The-AI-Moment/staging/videos/" class="nav-link">Videos</a>
+            </li>
+          
+            <li class="nav-item ">
+              <a href="/The-AI-Moment/staging/about/" class="nav-link">About</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <main class="main-content">
+      <div class="container">
+        <div class="page">
+  <header class="page-header">
+    <h1 class="page-title">Cleanup &amp; Maintenance Checklist</h1>
+    
+  </header>
+
+  <div class="page-content">
+    <h1 id="cleanup--maintenance-checklist">Cleanup &amp; Maintenance Checklist</h1>
+
+<p>Dieses Dokument dokumentiert regelmäßige Cleanup- und Wartungsaktivitäten fuer das The-AI-Moment-Repo.</p>
+
+<h2 id="zweck">Zweck</h2>
+<ul>
+  <li>Code-Qualitaet sicherstellen</li>
+  <li>Deprecated Code entfernen</li>
+  <li>Technische Schulden reduzieren</li>
+  <li>Komplexitaet minimieren</li>
+  <li>Dokumentation up-to-date halten</li>
+</ul>
+
+<hr />
+
+<h2 id="1-code-cleanup">1. Code-Cleanup</h2>
+
+<h3 id="11-jekyll-konfiguration-_configyml-_config_integrationyml">1.1 Jekyll-Konfiguration (<code class="language-plaintext highlighter-rouge">_config.yml</code>, <code class="language-plaintext highlighter-rouge">_config_integration.yml</code>)</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Ungenutzte Plugins entfernen oder aktivieren</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Veraltete Liquid-Filter/Tags pruefen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Redundante Eintraege in <code class="language-plaintext highlighter-rouge">defaults</code> entfernen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">exclude</code>-Regeln auf Notwendigkeit pruefen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">site.url</code> und <code class="language-plaintext highlighter-rouge">site.baseurl</code> mit neuen Pages-Pfaden abgleichen</li>
+</ul>
+
+<h3 id="12-layoutinclude-dateien-_layouts-_includes">1.2 Layout/Include-Dateien (<code class="language-plaintext highlighter-rouge">_layouts/</code>, <code class="language-plaintext highlighter-rouge">_includes/</code>)</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Nicht referenzierte Layouts loeschen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Duplikate in Includes aufloesen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />HTML-Attribute auf Accessibility pruefen (alt-tags, labels, etc.)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />CSS-Klassen-Konsistenz pruefen</li>
+</ul>
+
+<h3 id="13-css-assetscssmaincss">1.3 CSS (<code class="language-plaintext highlighter-rouge">assets/css/main.css</code>)</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Ungenutzte CSS-Regeln entfernen (grep nach Klassen in Layouts)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Duplikate/Ueberschreibungen konsolidieren</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Vendor-Prefixes aktualisieren (z. B. <code class="language-plaintext highlighter-rouge">-webkit-</code>, <code class="language-plaintext highlighter-rouge">-moz-</code>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Dark Mode / Responsive Design pruefen</li>
+</ul>
+
+<h3 id="14-javascript-assetsjsmainjs">1.4 JavaScript (<code class="language-plaintext highlighter-rouge">assets/js/main.js</code>)</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Ungenutzte Funktionen entfernen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Globale Variablen minimieren</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Konsolen-Logs in Production entfernen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Error-Handling ueberpruefen</li>
+</ul>
+
+<h3 id="15-markdown-content-md-_posts">1.5 Markdown-Content (<code class="language-plaintext highlighter-rouge">*.md</code>, <code class="language-plaintext highlighter-rouge">_posts/</code>)</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Veraltete/archivierte Posts als Draft markieren statt loeschen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Broken Links/References finden (z. B. via <code class="language-plaintext highlighter-rouge">grep</code>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Frontmatter-Konsistenz (alle Posts sollten <code class="language-plaintext highlighter-rouge">layout</code>, <code class="language-plaintext highlighter-rouge">title</code> haben)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Unnoetige <code class="language-plaintext highlighter-rouge">draft: true</code> Flags entfernen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Duplikate Inhalte zusammenfassen</li>
+</ul>
+
+<hr />
+
+<h2 id="2-workflow--deployment-cleanup">2. Workflow &amp; Deployment Cleanup</h2>
+
+<h3 id="21-github-actions-workflows-githubworkflows">2.1 GitHub Actions Workflows (<code class="language-plaintext highlighter-rouge">.github/workflows/</code>)</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Veraltete Actions upgraden (z. B. <code class="language-plaintext highlighter-rouge">actions/checkout@v5</code> -&gt; <code class="language-plaintext highlighter-rouge">v6</code>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Node.js/Ruby-Versionen mit aktuellen LTS vergleichen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Timeouts auf realistisch setzen (nicht zu kurz, nicht zu lang)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Concurrency-Gruppen auf Duplikate pruefen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Ungenutzte Workflows loeschen (z. B. alte <code class="language-plaintext highlighter-rouge">deploy.yml</code> wenn redundant)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Secrets &amp; Token-Scopes minimal halten</li>
+</ul>
+
+<h3 id="22-deploy-flows-integration-deployyml-production-deployyml">2.2 Deploy-Flows (<code class="language-plaintext highlighter-rouge">integration-deploy.yml</code>, <code class="language-plaintext highlighter-rouge">production-deploy.yml</code>)</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Redundante Build-Steps konsolidieren</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Destination-Dirs (<code class="language-plaintext highlighter-rouge">_site_staging</code>, <code class="language-plaintext highlighter-rouge">_site_prod</code>) pruefen auf noetige Unterschiede</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">keep_files: true</code> Policy ueberpruefen (Speicher-Wachstum)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Notifications/Alerts pruefen (falls vorhanden)</li>
+</ul>
+
+<h3 id="23-branching-policy">2.3 Branching Policy</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verwaiste Branches aufloesen (<code class="language-plaintext highlighter-rouge">git branch -r</code> pruefen)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Obsolete Protection Rules entfernen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Branch Naming Conventions nochmal pruefen</li>
+</ul>
+
+<hr />
+
+<h2 id="3-dokumentation-cleanup">3. Dokumentation Cleanup</h2>
+
+<h3 id="31-readmemd">3.1 README.md</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Veraltete URLs aktualisieren</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Setup-Schritte gegen <code class="language-plaintext highlighter-rouge">Makefile</code> abgleichen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Typos beheben</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Links auf interne Docs pruefen (<code class="language-plaintext highlighter-rouge">docs/</code>, <code class="language-plaintext highlighter-rouge">CHANGELOG</code>, etc.)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Versionsnummern aktualisieren (Ruby, Bundler, Actions)</li>
+</ul>
+
+<h3 id="32-docs">3.2 Docs/</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">branching-ci-policy.md</code> auf Aktualitaet pruefen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">cleanup.md</code> selbst updaten (diese Datei)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Veraltete technische Entscheidungen dokumentieren oder archivieren</li>
+</ul>
+
+<h3 id="33-templates">3.3 Templates</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">.github/pull_request_template.md</code> auf Aktualitaet pruefen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Ungenutzte Issue-Templates loeschen</li>
+</ul>
+
+<hr />
+
+<h2 id="4-dependencies-cleanup">4. Dependencies Cleanup</h2>
+
+<h3 id="41-gemfile--bundler">4.1 Gemfile / Bundler</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">gem list</code> durchgehen, ungenutzte Gems entfernen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Gem-Versionen pruefen auf Sicherheitsupdates (<code class="language-plaintext highlighter-rouge">bundle audit</code>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />GitHub-Pages-Kompatibilitaet verifizieren</li>
+</ul>
+
+<h3 id="42-gitignore">4.2 .gitignore</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Veraltete Ignore-Regeln entfernen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Neue Build-Artefakte hinzufuegen (falls noetig)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Duplikate eliminieren</li>
+</ul>
+
+<hr />
+
+<h2 id="5-build--performance-cleanup">5. Build &amp; Performance Cleanup</h2>
+
+<h3 id="51-jekyll-build">5.1 Jekyll Build</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">jekyll build --profile</code> ausfuehren und Performance-Bottlenecks identifizieren</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Ungenutzte Collections entfernen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Plugin-Load-Zeit pruefen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">_site</code> Groesse kontrollieren (sollte &lt; 50MB sein fuer Pages)</li>
+</ul>
+
+<h3 id="52-image--asset-optimization">5.2 Image &amp; Asset Optimization</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Bilder komprimieren (PNG/JPG -&gt; AVIF/WebP wenn moeglich)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Ungenutzte Assets loeschen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />CDN/Caching Headers pruefen</li>
+</ul>
+
+<hr />
+
+<h2 id="6-testing--validation-cleanup">6. Testing &amp; Validation Cleanup</h2>
+
+<h3 id="61-lokale-tests">6.1 Lokale Tests</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">make build-local</code> fehlerfrei ausfuehren</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">make build-integration</code> pruefen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">make build-production</code> testen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Staging + Production URLs testen (keine 404)</li>
+</ul>
+
+<h3 id="62-cicd-validation">6.2 CI/CD Validation</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Letzte 5 Action-Runs pruefen (erfolg = gruen?)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Failure-Logs reviewen</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Flaky Tests / Timeouts dokumentieren</li>
+</ul>
+
+<hr />
+
+<h2 id="7-regelmäßige-wartung-quarterly">7. Regelmäßige Wartung (Quarterly)</h2>
+
+<h3 id="71-dependency-updates">7.1 Dependency Updates</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle update
+gem update
+</code></pre></div></div>
+
+<h3 id="72-workflow-action-updates">7.2 Workflow Action Updates</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Manually check:</span>
+<span class="c"># - actions/checkout@vX</span>
+<span class="c"># - ruby/setup-ruby@vX</span>
+<span class="c"># - peaceiris/actions-gh-pages@vX</span>
+</code></pre></div></div>
+
+<h3 id="73-rubynode-version-check">7.3 Ruby/Node Version Check</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Lokales <code class="language-plaintext highlighter-rouge">.ruby-version</code> auf aktuellsten Patch aktualisieren</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />GitHub Actions <code class="language-plaintext highlighter-rouge">ruby-version</code> abgleichen</li>
+</ul>
+
+<hr />
+
+<h2 id="8-archive--deprecation">8. Archive &amp; Deprecation</h2>
+
+<h3 id="81-deprecated-code">8.1 Deprecated Code</h3>
+<p>Wenn Code deprecated wird:</p>
+<ol>
+  <li>Commit mit <code class="language-plaintext highlighter-rouge">chore: deprecate &lt;feature&gt;</code> aufnehmen</li>
+  <li>In <code class="language-plaintext highlighter-rouge">docs/cleanup.md</code> dokumentieren</li>
+  <li>Mit Removal-Zieldatum versehen (z. B. “Remove after 2026-Q3”)</li>
+</ol>
+
+<h3 id="82-historic-docs">8.2 Historic Docs</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Alte Release Notes archivieren (<code class="language-plaintext highlighter-rouge">docs/archive/</code>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Breaking Changes dokumentieren (<code class="language-plaintext highlighter-rouge">CHANGELOG.md</code>)</li>
+</ul>
+
+<hr />
+
+<h2 id="how-to-use-this-checklist">How to Use This Checklist</h2>
+
+<ol>
+  <li><strong>Copy-Paste für neue Cleanup-Branch:</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout <span class="nt">-b</span> chore/cleanup origin/integration
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Pro Item durchgehen:</strong>
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Abhaken, wenn erledigt</li>
+      <li class="task-list-item">Kommentar schreiben, falls nicht zutreffend</li>
+    </ul>
+  </li>
+  <li><strong>Commit nach jedem Abschnitt:</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"chore: cleanup section-X (beschreibung)"</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Am Ende: PR erstellen</strong> zur Review</li>
+</ol>
+
+<hr />
+
+<h2 id="timing">Timing</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Frequenz</th>
+      <th>Aufgaben</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Nach jedem Release</strong></td>
+      <td>Abschnitte 1-3 (Code, Workflows, Docs)</td>
+    </tr>
+    <tr>
+      <td><strong>Monatlich</strong></td>
+      <td>Abschnitt 5-6 (Build Performance, CI/CD)</td>
+    </tr>
+    <tr>
+      <td><strong>Quarterly</strong></td>
+      <td>Abschnitte 4, 7 (Dependencies, Updates)</td>
+    </tr>
+    <tr>
+      <td><strong>Jährlich</strong></td>
+      <td>Abschnitt 8 (Archive &amp; Deprecation)</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="kontakt--fragen">Kontakt / Fragen</h2>
+
+<p>Falls während des Cleanup Unklarheiten entstehen:</p>
+<ul>
+  <li>Vor Loeschen immer in git-history pruefen (z. B. <code class="language-plaintext highlighter-rouge">git log -p &lt;file&gt;</code>)</li>
+  <li>Dokumentieren, warum etwas geaendert wurde</li>
+  <li>Bei Breaking Changes: CHANGELOG aktualisieren</li>
+</ul>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h3>The AI Moment (Integration)</h3>
+        <p>Tracking AI developments, impact, and insights — articles, podcasts, and videos on the AI revolution.</p>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Explore</h4>
+        <ul>
+          
+            <li><a href="/The-AI-Moment/staging/">Home</a></li>
+          
+            <li><a href="/The-AI-Moment/staging/articles/">Articles</a></li>
+          
+            <li><a href="/The-AI-Moment/staging/podcasts/">Podcasts</a></li>
+          
+            <li><a href="/The-AI-Moment/staging/videos/">Videos</a></li>
+          
+            <li><a href="/The-AI-Moment/staging/about/">About</a></li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-topics">
+        <h4>Topics</h4>
+        <ul>
+          <li>AI Technology</li>
+          <li>Economic Impact</li>
+          <li>Social Impact</li>
+          <li>AI Policy &amp; Ethics</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 The AI Moment (Integration). Content curated for educational purposes.
+        Built with <a href="https://jekyllrb.com" target="_blank" rel="noopener noreferrer">Jekyll</a>
+        and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+      </p>
+      <p class="rss-link">
+        <a href="/The-AI-Moment/staging/feed.xml">RSS Feed</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="/The-AI-Moment/staging/assets/js/main.js"></script>
+  </body>
+</html>
