@@ -1,7 +1,7 @@
 title: "The AI Moment (Integration)"
 
 # Integration deployment lives at https://<domain>/staging/
-baseurl: "/staging"
+baseurl: "/The-AI-Moment/staging"
 
 # Include drafts for faster review in staging builds.
 show_drafts: true

@@ -85,7 +85,12 @@ make build-production
 ## Konfiguration
 
 - `_config.yml`: Basis-Konfiguration (Production-Defaults)
-- `_config_integration.yml`: Staging-Overrides (z. B. `baseurl: /staging`, `show_drafts: true`)
+- `_config_integration.yml`: Staging-Overrides (z. B. `baseurl: /The-AI-Moment/staging`, `show_drafts: true`)
+
+## Ziel-URLs
+
+- Production: `https://constantinniemeyer.github.io/The-AI-Moment/`
+- Staging: `https://constantinniemeyer.github.io/The-AI-Moment/staging/`
 
 ## Repo-Hygiene
 
