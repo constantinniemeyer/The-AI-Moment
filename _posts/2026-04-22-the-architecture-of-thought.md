@@ -23,7 +23,7 @@ further_reading:
   - title: "Emergent Abilities of Large Language Models"
     url: "https://arxiv.org/abs/2206.07682"
   - title: "Die Geschichte der KI (Till Freitag)"
-    url: "https://till-freitag.com/blog/ki-geschichte-3-chatgpt"
+    url: "https://till-freitag.com/blog/ki-geschichte-3-chatgpt-moment"
   - title: "ChatGPT - Wikipedia"
     url: "https://en.wikipedia.org/wiki/ChatGPT"
   - title: "AI Winter - Wikipedia"
@@ -34,6 +34,26 @@ further_reading:
     url: "https://mml-book.com"
   - title: "The Quest for Artificial Intelligence (Nils J. Nilsson)"
     url: "https://www.cambridge.org/9780521122931"
+  - title: "Attention Is All You Need (Vaswani et al., 2017)"
+    url: "https://arxiv.org/abs/1706.03762"
+  - title: "Language Models are Few-Shot Learners / GPT-3 (Brown et al., 2020)"
+    url: "https://arxiv.org/abs/2005.14165"
+  - title: "BERT: Pre-training of Deep Bidirectional Transformers (Devlin et al., 2019)"
+    url: "https://arxiv.org/abs/1810.04805"
+  - title: "Scaling Laws for Neural Language Models (Kaplan et al., 2020)"
+    url: "https://arxiv.org/abs/2001.08361"
+  - title: "Efficient Estimation of Word Representations in Vector Space / word2vec (Mikolov et al., 2013)"
+    url: "https://arxiv.org/abs/1301.3781"
+  - title: "Training Language Models to Follow Instructions with Human Feedback / InstructGPT (Ouyang et al., 2022)"
+    url: "https://arxiv.org/abs/2203.02155"
+  - title: "Build a Large Language Model (From Scratch) — code repository (Raschka, 2025)"
+    url: "https://github.com/rasbt/LLMs-from-scratch"
+  - title: "Deep Learning (Goodfellow, Bengio & Courville, 2016)"
+    url: "https://www.deeplearningbook.org/"
+  - title: "Artificial Intelligence: A Modern Approach (Russell & Norvig)"
+    url: "https://aima.cs.berkeley.edu/"
+  - title: "The Alignment Problem (Brian Christian, 2020)"
+    url: "https://brianchristian.org/the-alignment-problem/"
 ---
 
 The sudden ubiquity of large language models has left many wondering whether we have stumbled upon true machine intelligence or merely perfected a very sophisticated form of statistical mimicry.
@@ -82,32 +102,32 @@ The available sources include a comprehensive set of references covering the his
 
 ### Foundations and History of AI
 
-- **Russell, S. J. & Norvig, P. (2021/2003):** *Artificial Intelligence: A Modern Approach*. This standard reference is consistently cited as a foundational source for AI theory and practice.
-- **Nilsson, N. J. (2010):** *The Quest for Artificial Intelligence: A History of Ideas and Achievements*. A detailed account of AI's development from its origins to the modern era.
+- **Russell, S. J. & Norvig, P. (2021/2003):** [*Artificial Intelligence: A Modern Approach*](https://aima.cs.berkeley.edu/). This standard reference is consistently cited as a foundational source for AI theory and practice.
+- **Nilsson, N. J. (2010):** [*The Quest for Artificial Intelligence: A History of Ideas and Achievements*](https://www.cambridge.org/9780521122931). A detailed account of AI's development from its origins to the modern era.
 - **McCorduck, P. (2004):** *Machines Who Think*. A classic on the philosophical and historical aspects of AI research.
 - **Crevier, D. (1993):** *AI: The Tumultuous Search for Artificial Intelligence*. Focuses in particular on the early phases and the "AI winters".
 
 ### Landmark Publications on LLMs and Transformers
 
-- **Vaswani, A. et al. (2017):** *Attention Is All You Need*. The foundational paper that introduced the **Transformer architecture**, which underpins nearly all modern LLMs.
-- **Brown, T. B. et al. (2020):** *Language Models are Few-Shot Learners*. The publication on **GPT-3** that highlighted the potential of models with very large parameter counts.
-- **Devlin, J. et al. (2018/2019):** *BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding*. Introduced bidirectional training, which became crucial for many NLP tasks.
-- **Kaplan, J. et al. (2020):** *Scaling Laws for Neural Language Models*. A central study on how model performance scales with compute, dataset size, and parameter count.
+- **Vaswani, A. et al. (2017):** [*Attention Is All You Need*](https://arxiv.org/abs/1706.03762). The foundational paper that introduced the **Transformer architecture**, which underpins nearly all modern LLMs.
+- **Brown, T. B. et al. (2020):** [*Language Models are Few-Shot Learners*](https://arxiv.org/abs/2005.14165). The publication on **GPT-3** that highlighted the potential of models with very large parameter counts.
+- **Devlin, J. et al. (2018/2019):** [*BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding*](https://arxiv.org/abs/1810.04805). Introduced bidirectional training, which became crucial for many NLP tasks.
+- **Kaplan, J. et al. (2020):** [*Scaling Laws for Neural Language Models*](https://arxiv.org/abs/2001.08361). A central study on how model performance scales with compute, dataset size, and parameter count.
 
 ### Embeddings and Specific Techniques
 
-- **Mikolov, T. et al. (2013):** *Efficient Estimation of Word Representations in Vector Space*. The original **word2vec** paper that paved the way for modern word embeddings.
-- **Ouyang, L. et al. (2022):** *Training Language Models to Follow Instructions with Human Feedback*. The **InstructGPT** paper that popularized RLHF (Reinforcement Learning from Human Feedback) for aligning AI systems with human values.
-- **Raschka, S. (2025):** *Build a Large Language Model (From Scratch)*. A practical work on implementing embedding layers and transformers.
+- **Mikolov, T. et al. (2013):** [*Efficient Estimation of Word Representations in Vector Space*](https://arxiv.org/abs/1301.3781). The original **word2vec** paper that paved the way for modern word embeddings.
+- **Ouyang, L. et al. (2022):** [*Training Language Models to Follow Instructions with Human Feedback*](https://arxiv.org/abs/2203.02155). The **InstructGPT** paper that popularized RLHF (Reinforcement Learning from Human Feedback) for aligning AI systems with human values.
+- **Raschka, S. (2025):** [*Build a Large Language Model (From Scratch)*](https://github.com/rasbt/LLMs-from-scratch). A practical work on implementing embedding layers and transformers.
 
 ### Critical Analyses and Societal Impact
 
-- **Bender, E. M., Gebru, T. et al. (2021):** *On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?*. An influential critique of unchecked language-model scaling and its ethical risks.
-- **Wei, J. et al. (2022):** *Emergent Abilities of Large Language Models*. Examines capabilities that appear only once models reach a certain scale ("emergence").
-- **Christian, B. (2020):** *The Alignment Problem: Machine Learning and Human Values*. Addresses the challenge of designing AI systems that do not violate human goals.
+- **Bender, E. M., Gebru, T. et al. (2021):** [*On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?*](https://doi.org/10.1145/3442188.3445922). An influential critique of unchecked language-model scaling and its ethical risks.
+- **Wei, J. et al. (2022):** [*Emergent Abilities of Large Language Models*](https://arxiv.org/abs/2206.07682). Examines capabilities that appear only once models reach a certain scale ("emergence").
+- **Christian, B. (2020):** [*The Alignment Problem: Machine Learning and Human Values*](https://brianchristian.org/the-alignment-problem/). Addresses the challenge of designing AI systems that do not violate human goals.
 
 ### Mathematical and Technical Textbooks
 
-- **MacKay, D. J. C. (2003):** *Information Theory, Inference, and Learning Algorithms*. A comprehensive work on the connection between **information theory** and machine learning.
+- **MacKay, D. J. C. (2003):** [*Information Theory, Inference, and Learning Algorithms*](http://www.inference.phy.cam.ac.uk/mackay/itila/). A comprehensive work on the connection between **information theory** and machine learning.
 - **Bishop, C. M. (2006):** *Pattern Recognition and Machine Learning*. An in-depth textbook on the statistical foundations of pattern recognition.
-- **Goodfellow, I., Bengio, Y. & Courville, A. (2016):** *Deep Learning*. The standard textbook for the modern era of deep neural networks.
+- **Goodfellow, I., Bengio, Y. & Courville, A. (2016):** [*Deep Learning*](https://www.deeplearningbook.org/). The standard textbook for the modern era of deep neural networks.

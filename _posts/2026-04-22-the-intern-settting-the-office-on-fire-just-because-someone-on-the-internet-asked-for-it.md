@@ -26,6 +26,6 @@ The resulting chaos suggests that today's agents are far better at taking orders
 ## Original Sources and Documentation
 
 - Interactive Paper & Full Logs: [Agents of Chaos Official Site](https://agentsofchaos.baulab.info/)
-- Agent Framework: OpenClaw GitHub Repository
-- Social Platform for Agents: Moltbook
+- Agent Framework: [OpenClaw GitHub Repository](https://github.com/openclaw/openclaw)
+- Social Platform for Agents: [Moltbook](https://www.moltbook.com/)
 

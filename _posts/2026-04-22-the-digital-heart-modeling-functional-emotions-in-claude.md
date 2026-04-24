@@ -9,11 +9,13 @@ podcast_id: "/audio/the-digital-heart-modeling-functional-emotions-in-claude.m4a
 podcast_type: "audio"
 podcast_id_2: "/audio/the-digital-heart-modeling-functional-emotions-in-claude-de.m4a"
 podcast_type_2: "audio"
-source_url: "https://www.anthropic.com/research/emotion-concepts-llm"
+source_url: "https://www.anthropic.com/research/emotion-concepts-function"
 source_name: "Emotion Concepts and their Function in a Large Language Model (2026)"
 further_reading:
   - title: "Emotion Concepts and their Function in a Large Language Model (Anthropic, 2026)"
-    url: "https://www.anthropic.com/research/emotion-concepts-llm"
+    url: "https://www.anthropic.com/research/emotion-concepts-function"
+  - title: "Emotion Concepts and their Function in a Large Language Model (arXiv preprint)"
+    url: "https://arxiv.org/abs/2604.07729"
 ---
 > **Why listen in?**
 >
